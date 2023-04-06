@@ -5,8 +5,108 @@
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body>
+    <header class="header">
+      <a class="trademark" href="#"><img src="../source/img/trademark.svg" width="33.32px" height="37.61px" alt="Торговый знак Кэт энерджи."></a>
+      <a class="logo" href="#"><img src="../source/img/cat-logo.svg" width="101px" height="18px" alt="Логотип Кэт энерджи."></a>
+      <nav class="navigation">
+        <button class="navigation__button button"><span class="visually-hidden">Открыть или закрыть меню.</span></button>
+        <a class="navigation__link navigation__link--current" href="#">Главная</a>
+        <a class="navigation__link" href="#">Каталог продукции</a>
+        <a class="navigation__link" href="#">Подбор программы</a>
+      </nav>
+    </header>
+    <main>
+      <!--Секция Promo-->
+      <h1 class="visually-hidden">Подбор функционального питания для котов и кошек.</h1>
+      <section class="promo">
+        <h2 class="promo__title title">Функциональное питание для котов</h2>
+        <p class="promo__slogan">Занялся собой? Займись котом!</p>
+        <img src="../source/img/promo-image.jpg" width="280px" height="270px" alt="Упаковка функционального питания для котов из курицы.">
+        <a class="promo__button button">Подобрать программу</a>
+      </section>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+      <!--Секция Выбор программы питания-->
+      <section class="program">
+        <h2 class="visually-hidden">Программа питания для котов и кошек.</h2>
+        <article class="program__item nutrition-program nutrition-program--slim">
+          <h3 class="nutrition-program__title title">Похудение</h3>
+          <p class="nutrition-program__description description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+          <a class="nutrition-program__button button" href="#">Каталог slim</a>
+        </article>
+        <article class="program__item nutrition-program nutrition-program--pro">
+          <h3 class="nutrition-program__title title">Набор массы</h3>
+          <p class="nutrition-program__description description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+          <a class="nutrition-program__button button" href="#">Каталог pro</a>
+        </article>
+      </section>
 
+      <!--Секция Как это работает-->
+      <section class="advantages">
+        <h2 class="advantages__title title">Как это работает</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--icon-leaf description">Функциональное питание содержит только полезные питательные вещества.</li>
+          <li class="advantages__item advantages__item--icon-glass description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
+          <li class="advantages__item advantages__item--icon-tableware description">Замените один-два приема обычной еды на наше функциональное питание.</li>
+          <li class="advantages__item advantages__item--icon-clock description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+        </ul>
+      </section>
+
+      <!--Секция Живой пример-->
+      <section class="">
+        <h2 class="title">Живой пример</h2>
+        <p class="description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <table>
+          <tr>
+            <th>Снижение веса</th>
+            <th>Затрачено времени</th>
+            <th>Затраты на питание:</th>
+          </tr>
+          <tr>
+            <td>5 кг</td>
+            <td>60 дней</td>
+            <td>15 000 РУБ.</td>
+          </tr>
+        </table>
+
+        <!--Слайдер с толстым и худым котом-->
+        <div class="slider">
+          <img src="" width="280px" height="256px" alt="Кот до приминения питания Кэт энерджи.">
+          <img src="" width="280px" height="256px" alt="Кот после приминения питания Кэт энерджи.">
+          <button class="button"></button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <!--Секция с картой Как делать марку на карте??-->
+      <section class="contacts">
+        <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <img src="../source/img/map.jpg" width="320px" height="362px" alt="Расположение офиса компании на карте в Санкт-Петербурге.">
+      </section>
+
+      <!--Секция Соц сети-->
+      <section class="social">
+        <a class="social__link logo" href="#"><img src="../source/img/trademark.svg" width="128px" height="24px" alt="Торговая марка Кэт энерджи."></a>
+        <div class="social__networks">
+          <a class="social__link social__link" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Перейти на нашу страницу Вконтакте.</span>
+            <img src="../source/img/vkontakte.svg" width="28px" height="22px" alt="Вконтакте">
+          </a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Перейти на наш канал в Ютубе.</span>
+            <img src="../source/img/youtube.svg" width="28px" height="22px" alt="Ютуб">
+          </a>
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Перейти на наш канал Телеграм.</span>
+            <img src="../source/img/telegram.svg" width="28px" height="22px" alt="Телеграм">
+          </a>
+        </div>
+        <a class="social__link social__link--academy" href="">
+          <span class="visually-hidden"></span>
+          <img class="logo logo__academy" src="" alt="">
+          <img class="trademark trademark__academy" src="" alt="">
+        </a>
+      </section>
+    </footer>
   </body>
 </html>
