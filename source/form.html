@@ -23,11 +23,99 @@
   </header>
   <main>
     <h1>Подбор программы</h1>
-    <form action="">
-
+    <p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <form action="https://echo.htmlacademy.ru/" method="get">
+      <fieldset>
+        <ul>
+          <li>
+            <label for=""></label>
+            <input type="text">
+          </li>
+          <li>
+            <label for=""></label>
+            <input type="text">
+          </li>
+          <li>
+            <label for=""></label>
+            <input type="text">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <ul>
+          <li>
+            <label>
+              <input type="radio">
+              <span class="mark"></span>
+              <span class="label">Похудение</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio">
+              <span class="mark"></span>
+              <span class="label">Набор массы</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio">
+              <span class="mark"></span>
+              <span class="label">Не знаю (Нужен ваш совет)</span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Контактные данные (владельца кота)</legend>
+        <label for=""></label>
+        <input type="email">
+        <label for=""></label>
+        <input type="tel" pattern="8 ([0-9]){3} [0-9]{3} - [0-9]{2} - [0-9]{2}">
+      </fieldset>
+      <fieldset>
+        <legend>Комментарий</legend>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend></legend>
+        <ul>
+          <li>
+            <label for="">
+              <input type="checkbox">
+              <span class="control-mark"></span>
+              <span class="control-label">сахарозаменитель</span>
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <input type="checkbox">
+              <span class="control-mark"></span>
+              <span class="control-label">питьевая вода</span>
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <input type="checkbox">
+              <span class="control-mark"></span>
+              <span class="control-label">молоко</span>
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <input type="checkbox">
+              <span class="control-mark"></span>
+              <span class="control-label">витамины</span>
+            </label>
+          </li>
+        </ul>
+        </label>
+      </fieldset>
+      <button class="button"></button>
+      <span>* — Обязательные поля</span>
     </form>
-
   </main>
+
   <footer class="footer">
     <!--Секция с картой Как делать марку на карте??-->
     <section class="contacts">
@@ -52,7 +140,7 @@
         </a>
         <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
           <span class="visually-hidden">Перейти на наш канал Телеграм.</span>
-          <img ="../source/img/telegram.svg" width="28" height="22" alt="Телеграм">
+          <img src="img/telegram.svg" width="28" height="22" alt="Телеграм">
         </a>
       </div>
       <a class="social__link social__link--academy" href="">
