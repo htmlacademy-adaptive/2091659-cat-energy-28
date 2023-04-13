@@ -10,9 +10,9 @@
 
 <body>
   <header class="header">
-    <a class="trademark" href="#"><img src="img/trademark.svg" width="34" height="38"
+    <a class="trademark" href="index.html"><img src="img/trademark.svg" width="34" height="38"
         alt="Торговый знак Кэт энерджи."></a>
-    <a class="logo" href="#"><img src="img/cat-logo.svg" width="101" height="18" alt="Логотип Кэт энерджи."></a>
+    <a class="logo" href="index.html"><img src="img/cat-logo.svg" width="101" height="18" alt="Логотип Кэт энерджи."></a>
     <nav class="navigation">
       <button class="navigation__button button"><span class="visually-hidden">Открыть или закрыть меню.</span></button>
       <a class="navigation__link" href="index.html">Главная</a>
@@ -75,7 +75,9 @@
       </fieldset>
       <fieldset class="form__group">
         <legend class="form__title form__title-fieldset">Комментарий</legend>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
+        <label class="form__comments">
+          <textarea name="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </label>
       </fieldset>
       <fieldset class="form__group">
         <legend class="form__title form__title-fieldset">Дополнительно</legend>
@@ -109,7 +111,6 @@
             </label>
           </li>
         </ul>
-        </label>
       </fieldset>
       <button class="form__button button button__form">Отправить заявку</button>
       <span class="form__note">* — Обязательные поля</span>
@@ -119,6 +120,7 @@
   <footer class="footer">
     <!--Секция с картой Как делать марку на карте??-->
     <section class="contacts">
+      <h2 class="visually-hidden">Наш адрес.</h2>
       <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
       <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       <img src="img/map.jpg" width="320" height="362" alt="Расположение офиса компании на карте в Санкт-Петербурге.">
@@ -126,6 +128,7 @@
 
     <!--Секция Соц сети-->
     <section class="social">
+      <h2 class="visually-hidden">Мы в социальных сетях.</h2>
       <a class="social__link logo" href="#"><img src="img/trademark.svg" width="128" height="24"
           alt="Торговая марка Кэт энерджи."></a>
       <div class="social__networks">
