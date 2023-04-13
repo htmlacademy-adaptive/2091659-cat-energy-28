@@ -22,97 +22,98 @@
     </nav>
   </header>
   <main>
-    <h1>Подбор программы</h1>
-    <p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
-    <form action="https://echo.htmlacademy.ru/" method="get">
-      <fieldset>
-        <ul>
-          <li>
-            <label for=""></label>
-            <input type="text">
+    <form class="form" action="https://echo.htmlacademy.ru/" method="get">
+      <h1 class="form__title">Подбор программы</h1>
+      <fieldset class="form__group">
+        <legend class="form__title form__title-fieldset">Заполните анкету, и мы подберем программу питания для вашего кота</legend>
+        <ul class="form__pet-name-list pet-name-list">
+          <li class="pet-name-item">
+            <label for="pet-name-field">Имя:*</label>
+            <input type="text" name="pet-name" id="pet-name-field" placeholder="Введите Имя" value="Барсик" required>
           </li>
-          <li>
-            <label for=""></label>
-            <input type="text">
+          <li class="pet-name-item">
+            <label for="pet-weight-field">Вес (кг):*</label>
+            <input type="number" name="pet-weight" id="pet-weight-field" placeholder="Введите вес" value="7" required>
           </li>
-          <li>
-            <label for=""></label>
-            <input type="text">
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset>
-        <ul>
-          <li>
-            <label>
-              <input type="radio">
-              <span class="mark"></span>
-              <span class="label">Похудение</span>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="radio">
-              <span class="mark"></span>
-              <span class="label">Набор массы</span>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="radio">
-              <span class="mark"></span>
-              <span class="label">Не знаю (Нужен ваш совет)</span>
-            </label>
+          <li class="pet-name-item">
+            <label for="pet-age-field">Возраст (лет):</label>
+            <input type="number" name="pet-age" id="pet-age-field" placeholder="Введите возраст" value="7">
           </li>
         </ul>
       </fieldset>
-      <fieldset>
-        <legend>Контактные данные (владельца кота)</legend>
-        <label for=""></label>
-        <input type="email">
-        <label for=""></label>
-        <input type="tel" pattern="8 ([0-9]){3} [0-9]{3} - [0-9]{2} - [0-9]{2}">
+      <fieldset class="form__group">
+        <legend class="visually-hidden">Выберите программу для кота.</legend>
+        <ul class="form__program-options program-options">
+          <li class="program-item">
+            <label class="control">
+              <input class="control-input visually-hidden" type="radio" name="program-selection" checked>
+              <span class="control-mark-radio"></span>
+              <span class="control-label">Похудение</span>
+            </label>
+          </li>
+          <li class="program-item">
+            <label class="control">
+              <input class="control-input visually-hidden" type="radio" name="program-selection">
+              <span class="control-mark-radio"></span>
+              <span class="control-label">Набор массы</span>
+            </label>
+          </li>
+          <li class="program-item">
+            <label class="control">
+              <input class="control-input visually-hidden" type="radio" name="program-selection">
+              <span class="control-mark-radio"></span>
+              <span class="control-label">Не знаю (Нужен ваш совет)</span>
+            </label>
+          </li>
+        </ul>
       </fieldset>
-      <fieldset>
-        <legend>Комментарий</legend>
+      <fieldset class="form__group">
+        <legend class="form__title form__title-fieldset">Контактные данные (владельца кота)</legend>
+        <label for="email-pet-owner">E-mail:*</label>
+        <input type="email" name="email-pet-owner" id="email-pet-owner" placeholder="E-mail" required>
+        <label for="tel-pet-owner">Телефон:*</label>
+        <input type="tel"  name="tel-pet-owner" id="tel-pet-owner" pattern="8 ([0-9]){3} [0-9]{3} - [0-9]{2} - [0-9]{2}" required>
+      </fieldset>
+      <fieldset class="form__group">
+        <legend class="form__title form__title-fieldset">Комментарий</legend>
         <textarea name="" id="" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
       </fieldset>
-      <fieldset>
-        <legend></legend>
+      <fieldset class="form__group">
+        <legend class="form__title form__title-fieldset">Дополнительно</legend>
         <ul>
           <li>
-            <label for="">
-              <input type="checkbox">
+            <label class="control">
+              <input class="control-input visually-hidden" type="checkbox" name="sweetener" checked>
               <span class="control-mark"></span>
-              <span class="control-label">сахарозаменитель</span>
+              <span class="control-label">Сахарозаменитель</span>
             </label>
           </li>
           <li>
-            <label for="">
-              <input type="checkbox">
+            <label class="control">
+              <input class="control-input visually-hidden" type="checkbox" name="water">
               <span class="control-mark"></span>
-              <span class="control-label">питьевая вода</span>
+              <span class="control-label">Питьевая вода</span>
             </label>
           </li>
           <li>
-            <label for="">
-              <input type="checkbox">
+            <label class="control">
+              <input class="control-input visually-hidden" type="checkbox" name="milk">
               <span class="control-mark"></span>
-              <span class="control-label">молоко</span>
+              <span class="control-label">Молоко</span>
             </label>
           </li>
           <li>
-            <label for="">
-              <input type="checkbox">
+            <label class="control">
+              <input class="control-input visually-hidden" type="checkbox" name="vitamins">
               <span class="control-mark"></span>
-              <span class="control-label">витамины</span>
+              <span class="control-label">Витамины</span>
             </label>
           </li>
         </ul>
         </label>
       </fieldset>
-      <button class="button"></button>
-      <span>* — Обязательные поля</span>
+      <button class="form__button button button__form">Отправить заявку</button>
+      <span class="form__note">* — Обязательные поля</span>
     </form>
   </main>
 
