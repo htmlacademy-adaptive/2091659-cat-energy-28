@@ -1,0 +1,51 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}
+
+.navigation__link {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @basic-black;
+  padding-top: 22px;
+  padding-right: 5px;
+  padding-bottom: 24px;
+  padding-left: 5px;
+  background-color: @basic-white;
+
+  &--current {
+    position: relative;
+
+    &--current::after {
+      position: absolute;
+      content: "";
+      right: 5px;
+      left: 5px;
+      height: 2px;
+      background-color: @basic-green;
+    }
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+}
+
+.navigation__wrapper {
+  display: block;
+  position: absolute;
+  z-index: 1;
+
+  &--close {
+    display: none;
+  }
+}
+
+.navigation__button {
+  background-image: url(/img/navigation-button.svg);
+  width: 24px;
+  height: 16px;
+}

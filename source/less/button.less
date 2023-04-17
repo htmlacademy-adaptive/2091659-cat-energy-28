@@ -1,0 +1,17 @@
+.button {
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @basic-white;
+  background-color: @basic-green;
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  &:hover {
+    background-color: @basic-green-action;
+  }
+  &:active {
+    background-color: @basic-green-action;
+    color: darken(@basic-white, 30%);
+  }
+}
