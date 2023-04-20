@@ -1,14 +1,14 @@
 .navigation {
-  display: flex;
+  //display: flex;
   align-items: center;
-  position: relative;
 
 }
 
 .navigation__link {
-  display: block;
+  //display: block;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
   color: @basic-black;
   padding-top: 22px;
   padding-right: 5px;
@@ -19,7 +19,7 @@
   &--current {
     position: relative;
 
-    &--current::after {
+    &::after {
       position: absolute;
       content: "";
       right: 5px;
@@ -35,9 +35,8 @@
 }
 
 .navigation__wrapper {
-  display: block;
-  position: absolute;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
 
   &--close {
     display: none;
@@ -45,7 +44,7 @@
 }
 
 .navigation__button {
-  background-image: url(/img/navigation-button.svg);
+  background-image: url(./img/navigation-button.svg);
   width: 24px;
   height: 16px;
 }

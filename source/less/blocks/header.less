@@ -5,10 +5,14 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
 
 }
 
 .header__item {
-  display: block;
+
+  &:last-child {
+    flex-grow: 1;
+
+  }
+
 }

@@ -13,8 +13,8 @@
       <header class="header">
         <a class="header__item trademark" href="index.html"><img src="img/trademark.svg" width="34" height="38" alt="Торговый знак Кэт энерджи."></a>
         <a class="header__item logo" href="index.html"><img src="img/cat-logo.svg" width="101" height="18" alt="Логотип Кэт энерджи."></a>
-        <nav class="header__item navigation">
-          <button class="navigation__button button"><span class="visually-hidden">Открыть или закрыть меню.</span></button>
+        <nav class="header__item navigation navigation--close">
+          <button class="navigation__button"><span class="visually-hidden">Открыть или закрыть меню.</span></button>
           <div class="navigation__wrapper navigation__wrapper--close">
             <a class="navigation__link navigation__link--current" href="index.html">Главная</a>
             <a class="navigation__link" href="catalog.html">Каталог продукции</a>
@@ -28,7 +28,7 @@
         <section class="promo">
           <h2 class="promo__title title title--promo">Функциональное питание для котов</h2>
           <p class="promo__slogan title title--slogan">Занялся собой? Займись котом!</p>
-          <img src="img/promo-image.png" width="280" height="270"
+          <img class="promo__image" src="img/promo-image.png" width="280" height="270"
             alt="Упаковка функционального питания для котов из курицы.">
           <a class="promo__button button" href="form.html">Подобрать программу</a>
         </section>
@@ -36,17 +36,17 @@
         <!--Секция Выбор программы питания-->
         <section class="program">
           <h2 class="visually-hidden">Программа питания для котов и кошек.</h2>
-          <article class="program__item nutrition-program nutrition-program--slim">
-            <h3 class="nutrition-program__title  title title--program">Похудение</h3>
-            <p class="nutrition-program__description description">Ваш кот весит больше собаки и почти утратил способность
+          <article class="program__item program__item--slim nutrition-program nutrition-program--slim">
+            <h3 class="program__title title title--program">Похудение</h3>
+            <p class="program__description description">Ваш кот весит больше собаки и почти утратил способность
               лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="nutrition-program__button" href="#">Каталог slim</a>
+            <a class="program__button title title--link" href="#">Каталог slim</a>
           </article>
-          <article class="program__item nutrition-program nutrition-program--pro">
-            <h3 class="nutrition-program__title title title--program">Набор массы</h3>
-            <p class="nutrition-program__description description">Заработать авторитет среди дворовых котов и даже собак?
+          <article class="program__item program__item--pro nutrition-program nutrition-program--pro">
+            <h3 class="program__title title title--program">Набор массы</h3>
+            <p class="program__description description">Заработать авторитет среди дворовых котов и даже собак?
               Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="nutrition-program__button" href="#">Каталог pro</a>
+            <a class="program__button title title--link" href="#">Каталог pro</a>
           </article>
         </section>
 
@@ -73,10 +73,10 @@
             в день.
           </p>
           <dl class="example__advantages">
-            <dt class="example__term">Снижение веса</dt>
-            <dd class="example__value">5 кг</dd>
-            <dt class="example__term">Затрачено времени</dt>
-            <dd class="">60 дней</dd>
+            <dt class="example__term description description--advantages">Снижение веса</dt>
+            <dd class="example__value title title--advantages">5 кг</dd>
+            <dt class="example__term description description--advantages">Затрачено времени</dt>
+            <dd class="example__value title title--advantages">60 дней</dd>
           </dl>
           <dl class="example__total">
             <dt class="example__term">Затраты на питание:</dt>

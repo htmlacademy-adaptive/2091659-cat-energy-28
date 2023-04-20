@@ -1,0 +1,51 @@
+.program {
+
+}
+
+.program__item {
+  margin-top: 20px ;
+  padding-top: 30px;
+  padding-bottom: 18px;
+  background-color: @basic-grey;
+
+  &--slim {
+    background-image: url(../img/icon-slim.png);
+    background-repeat: no-repeat;
+  }
+
+  &--pro {
+    background-image: url(../img/icon-pro.png);
+    background-repeat: no-repeat;
+  }
+}
+
+.program__title {
+  padding-left: 91px;
+}
+
+.program__description {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 29px;
+  padding-right: 33px;
+  padding-left: 20px;
+
+}
+
+.program__button {
+  display: block;
+  padding-top: 38px;
+  padding-left: 20px;
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/program-arrow.svg);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 10px;
+
+  }
+}
