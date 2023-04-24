@@ -1,6 +1,9 @@
 .advantages {
   padding-top: 20px;
   padding-bottom: 49px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .advantages__title {
@@ -19,9 +22,10 @@
   padding-left: 80px;
 
   &--icon-leaf {
-    background-image: url(../img/icon-leaf.png);
+    background-image: url(../img/advantages-numbering-1.svg);
     background-repeat: no-repeat;
     background-position-y:center ;
+    background-position-x: right;
   }
 
   &--icon-glass {
@@ -41,4 +45,126 @@
     background-repeat: no-repeat;
     background-position-y:center ;
   }
+}
+
+@media (min-width: @width-tablet) {
+  .advantages__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 153px;
+    row-gap: 37px;
+  }
+
+  .advantages__item {
+    padding-top: 151px;
+    padding-bottom: 57px;
+
+    &--icon-leaf {
+      grid-area: 1 / 1 / 2 / 2;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../img/icon-leaf.png);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        width: 136px;
+        height: 280px;
+        top: 20px;
+        right: 30px;
+
+      }
+
+    }
+
+    &--icon-glass {
+      grid-area: 1 / 2 / 2 / 3;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../img/advantages-numbering-2.svg);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        width: 136px;
+        height: 280px;
+        top: 20px;
+        right: 30px;
+
+      }
+
+    }
+
+    &--icon-tableware {
+      grid-area: 2 / 1 / 3 / 2;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../img/advantages-numbering-3.svg);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        width: 136px;
+        height: 280px;
+        top: 20px;
+        right: 30px;
+
+      }
+
+    }
+
+    &--icon-clock {
+      grid-area: 2 / 2 / 3 / 3;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../img/advantages-numbering-4.svg);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        width: 136px;
+        height: 280px;
+        top: 20px;
+        right: 30px;
+
+      }
+
+    }
+  }
+
+}
+
+@media (min-width: @width-desktop) {
+  .advantages__list {
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 80px;
+  }
+  .advantages__item {
+
+    &--icon-leaf {
+      grid-area: 1 / 1 / 2 / 2;
+
+    }
+
+    &--icon-glass {
+      grid-area: 1 / 2 / 2 / 3;
+
+    }
+
+    &--icon-tableware {
+      grid-area: 1 / 3 / 2 / 4;
+
+    }
+
+    &--icon-clock {
+      grid-area: 1 / 4 / 2 / 5;
+
+    }
+  }
+
+
 }

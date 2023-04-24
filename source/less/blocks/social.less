@@ -51,3 +51,25 @@
     justify-content: space-between;
   }
 }
+
+@media (min-width: @width-tablet) {
+  .social {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 55px 30px;
+  }
+
+  .social__networks {
+    position: static;
+  }
+
+  .social__link {
+    &--academy{
+      justify-content: end;
+      column-gap: 28px;
+
+    }
+  }
+
+
+}

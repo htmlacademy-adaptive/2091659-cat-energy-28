@@ -3,16 +3,31 @@
   color: @basic-black;
   background-color: @basic-white;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-
 }
 
 .header__item {
-
-  &:last-child {
+  &:--navigation {
     flex-grow: 1;
+  }
+}
 
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (min-width: @width-tablet) {
+  .header {
+    justify-content: space-between;
   }
 
+  .header__item {
+
+    &:--navigation {
+      margin-left: auto;
+    }
+  }
 }

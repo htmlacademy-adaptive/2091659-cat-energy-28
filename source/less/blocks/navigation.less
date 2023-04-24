@@ -16,18 +16,6 @@
   padding-left: 5px;
   background-color: @basic-white;
 
-  &--current {
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      right: 5px;
-      left: 5px;
-      height: 2px;
-      background-color: @basic-green;
-    }
-  }
 
   &:hover {
     opacity: 60%;
@@ -44,7 +32,36 @@
 }
 
 .navigation__button {
-  background-image: url(./img/navigation-button.svg);
+  background-image: url(/img/navigation-button.svg);
   width: 24px;
   height: 16px;
+}
+
+@media (min-width: @width-tablet) {
+  .navigation__button {
+    display: none;
+  }
+
+  .navigation__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .navigation__link {
+
+    &--current {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        right: 5px;
+        left: 5px;
+        height: 2px;
+        background-color: @basic-green;
+        top: 45px;
+      }
+    }
+
+  }
 }
