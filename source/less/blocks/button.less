@@ -1,5 +1,7 @@
 .button {
   font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
   color: @basic-white;
@@ -14,4 +16,12 @@
     background-color: @basic-green-action;
     color: darken(@basic-white, 30%);
   }
+}
+
+@media (min-width: @width-tablet) {
+  .button {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
 }
