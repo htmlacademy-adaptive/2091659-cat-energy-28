@@ -1,0 +1,26 @@
+.gift {
+  padding: 187px 56px 43px 56px;
+  background-color: @basic-green;
+  background-image: url(../img/gift-background.jpg);
+  background-repeat: no-repeat;
+  width: 280px;
+
+}
+
+.gift__description {
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 161px;
+  text-align: center;
+  position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/icon-gift.png);
+      width: 78px;
+      height: 80px;
+      top: -125px;
+      left: 35px;
+    }
+}

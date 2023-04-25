@@ -3,10 +3,15 @@
   grid-template-columns: 1fr;
 }
 
+.catalog__title {
+  padding: 27px 42px 41px 20px;
+}
+
+
 @media (min-width: @width-tablet) {
   .catalog__main {
     grid-template-columns: 1fr 1fr;
-    //gap: 60px;
+    gap: 60px;
   }
 
 }
@@ -14,7 +19,7 @@
 @media (min-width: @width-desktop) {
   .catalog__main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    //column-gap: 80px;
-    //row-gap: 63px;
+    column-gap: 80px;
+    row-gap: 63px;
   }
 }
