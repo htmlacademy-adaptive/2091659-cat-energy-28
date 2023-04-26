@@ -1,4 +1,5 @@
 .advantages {
+  .centering-wrapper(@width-mobile);
   padding-top: 20px;
   padding-bottom: 49px;
   display: flex;
@@ -48,6 +49,10 @@
 }
 
 @media (min-width: @width-tablet) {
+  .advantages {
+    .centering-wrapper(@width-tablet);
+  }
+
   .advantages__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -139,6 +144,10 @@
 }
 
 @media (min-width: @width-desktop) {
+  .advantages {
+    .centering-wrapper(@width-desktop);
+  }
+
   .advantages__list {
     grid-template-columns: repeat(5, 1fr);
     column-gap: 80px;

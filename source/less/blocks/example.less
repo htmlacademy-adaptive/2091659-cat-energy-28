@@ -1,27 +1,70 @@
 .example {
+  .centering-wrapper(@width-mobile);
   padding-top: 25px;
+  background-color: @secondary-grey-background;
 }
 
 .example__description {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.example__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .example__advantages {
   margin-top: 0;
   margin-bottom: 0;
-  padding:20px 0;
+  padding:15px 0;
+  border: 1px solid @basic-grey-border;
+  border-radius: 4px;
+  width: 124px;
+  text-align: center;
+  position: relative;
+}
+
+.example__term{
+
+  &--advantages {
+    width: 77px;
+    position: absolute;
+    bottom: -14px;
+    left: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color:@secondary-grey-background;
+  }
+  ;
+
 }
 
 .example__value {
   margin-left: 0;
 }
 
-@media (min-width: @width-tablet) {
+.example__total {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
 
+@media (min-width: @width-tablet) {
+  .example {
+    .centering-wrapper(@width-tablet);
+  }
 }
 
 @media (min-width: @width-desktop) {
-
+  .example {
+    .centering-wrapper(@width-desktop);
+  }
 }

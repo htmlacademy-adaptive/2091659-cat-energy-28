@@ -1,4 +1,5 @@
 .social {
+  .centering-wrapper(@width-mobile);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -54,9 +55,10 @@
 
 @media (min-width: @width-tablet) {
   .social {
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 55px 30px;
+    .centering-wrapper(@width-tablet);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 55px 30px;
   }
 
   .social__networks {
@@ -67,9 +69,13 @@
     &--academy{
       justify-content: end;
       column-gap: 28px;
-
     }
   }
+}
 
+@media (min-width: @width-desktop) {
+  .social {
+    .centering-wrapper(@width-desktop);
+  }
 
 }

@@ -1,7 +1,18 @@
 .promo {
-  padding-top: 27px;
+  .no-centering-wrapper(@width-mobile);
   text-align: center;
-  background-color: @basic-grey-description;
+  padding-bottom: 20px;
+}
+
+.promo__title {
+  padding-top: 27px;
+}
+
+.promo__wrapper {
+  background-image: url(../img/background-greencat-mobile.jpg);
+  width: 320px;
+  height: 302px;
+  background-color: @basic-green-action;
 }
 
 .promo__slogan {
@@ -10,16 +21,23 @@
 
 .promo__image {
   display: block;
-  margin-top: 29px;
+  margin-top: -130px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
 }
 
 .promo__button {
   display: block;
   margin-top: 3px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: @width-tablet) {
   .promo {
+    .no-centering-wrapper(@width-tablet);
     padding-top: 62px;
     text-align: start;
     display: grid;
@@ -49,6 +67,7 @@
 
 @media (min-width: @width-desktop) {
   .promo {
+    .no-centering-wrapper(@width-desktop);
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
   }

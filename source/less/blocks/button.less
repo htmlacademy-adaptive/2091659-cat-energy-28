@@ -8,6 +8,8 @@
   background-color: @basic-green;
   padding-top: 7px;
   padding-bottom: 7px;
+  border: none;
+  cursor: pointer;
 
   &:hover {
     background-color: @basic-green-action;
@@ -15,6 +17,17 @@
   &:active {
     background-color: @basic-green-action;
     color: darken(@basic-white, 30%);
+  }
+}
+
+.button--navigation {
+  background-color: @basic-white;
+
+  &:hover {
+    background-color: darken(@basic-white, 20%);
+  }
+  &:active {
+    background-color: darken(@basic-white, 40%);
   }
 }
 

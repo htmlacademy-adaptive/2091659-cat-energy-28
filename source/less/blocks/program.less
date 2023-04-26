@@ -1,4 +1,5 @@
 .program {
+  .centering-wrapper(@width-mobile);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -13,11 +14,13 @@
   &--slim {
     background-image: url(../img/icon-slim.png);
     background-repeat: no-repeat;
+    background-position: 14px 24px;
   }
 
   &--pro {
     background-image: url(../img/icon-pro.png);
     background-repeat: no-repeat;
+    background-position: 14px 24px;
   }
 }
 
@@ -41,19 +44,30 @@
   position: relative;
   text-decoration: none;
 
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: @basic-grey-pseudo-footer-element;
+    left: 20px;
+    right: 20px;
+    top:19px;
+  }
+
   &::after {
     position: absolute;
     content: "";
     background-image: url(../img/program-arrow.svg);
     background-repeat: no-repeat;
-    width: 32px;
-    height: 10px;
-
+    width: 43px;
+    height: 20px;
+    background-position: 10px 2px;
   }
 }
 
 @media (min-width: @width-tablet) {
   .program {
+    .centering-wrapper(@width-tablet);
     gap: 30px;
   }
 
@@ -92,6 +106,7 @@
 
 @media (min-width: @width-desktop) {
   .program {
+    .centering-wrapper(@width-desktop);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
