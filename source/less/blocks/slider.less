@@ -4,6 +4,7 @@
 
 .slider__img-1 {
   position: absolute;
+  background-color: @secondary-grey-background;
 }
 
 .slider__bar {
@@ -30,4 +31,28 @@
   background-image: url(/img/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: 6px 8px;
+}
+
+@media (min-width: @width-tablet) {
+  .slider {
+    .centering-wrapper(@width-tablet);
+    position: absolute;
+    top: -57px;
+  }
+
+  .slider__wrapper {
+    position: relative;
+    background-color: transparent;
+  }
+
+  .slider__img-1 {
+    top: 50%;
+    left: 50%;
+    transform: translateX(~"-99%") translateY(~"-50%");
+  }
+
+  .slider__img-2 {
+    display: block;
+    margin: 0 auto;
+  }
 }

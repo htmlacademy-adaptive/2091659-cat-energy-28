@@ -1,4 +1,4 @@
-.centering-wrapper(@width) when (@width = @width-mobile) {
+.centering-wrapper(@width) when (@width >= @width-mobile) {
   width: 280px;
   margin: 0 auto;
   padding: 0 20px;
@@ -16,7 +16,7 @@
   padding: 0 110px;
 }
 
-.no-centering-wrapper(@width) when (@width = @width-mobile) {
+.no-centering-wrapper(@width) when (@width >= @width-mobile) {
   width: 320px;
   margin: 0 auto;
 }

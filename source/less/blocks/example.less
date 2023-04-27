@@ -39,8 +39,6 @@
     padding-right: 5px;
     background-color:@secondary-grey-background;
   }
-  ;
-
 }
 
 .example__value {
@@ -59,8 +57,58 @@
 
 @media (min-width: @width-tablet) {
   .example {
-    .centering-wrapper(@width-tablet);
+    .no-centering-wrapper(@width-tablet);
+    padding-left: 0;
+    padding-right: 0;
+    background-color: @basic-white;
+    border-top: 1px solid @secondary-grey-navigation;
   }
+
+  .example__container {
+    .centering-wrapper(@width-tablet);
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 99px;
+
+  }
+
+  .example__description {
+    padding-top: 63px;
+    padding-bottom: 54px;
+  }
+
+  .example__slider {
+    background-color: @secondary-grey-background;
+    position: relative;
+    padding-top: 200px;
+  }
+
+  .example__term{
+
+    &--advantages {
+     background-color:@basic-white;
+    }
+  }
+
+  .example__wrapper {
+    column-gap: 42px;
+    margin-right: auto;
+
+  }
+
+  .example__total {
+    flex-direction: column;
+  }
+
+  .example__term {
+    align-self: flex-end;
+  }
+
+  .example__value {
+    align-self: flex-end;
+  }
+
+
 }
 
 @media (min-width: @width-desktop) {

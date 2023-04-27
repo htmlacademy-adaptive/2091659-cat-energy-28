@@ -69,7 +69,7 @@
   .program {
     .centering-wrapper(@width-tablet);
     gap: 30px;
-  }
+ }
 
   .program__item {
     width: 340px;
@@ -80,13 +80,15 @@
     align-items: start;
 
     &--slim {
-      background-position-x: right;
-      background-position-y: center;
+      background-position-x: 519px;
+      background-position-y: 101px;
+      background-size: 140px 194px
     }
 
     &--pro {
-      background-position-x: right;
-      background-position-y: center;
+      background-position-x: 519px;
+      background-position-y: 101px;
+      background-size: 140px 194px
     }
   }
 
@@ -101,6 +103,10 @@
 
   .program__button {
     padding-left: 0;
+
+    &::before {
+      position: relative;
+    }
   }
 }
 

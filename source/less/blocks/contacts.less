@@ -33,12 +33,29 @@
 
   .contacts__wrapper {
     .centering-wrapper(@width-tablet);
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .contacts__address {
+    width: 170px;
+    text-align: end
+  }
+
+  .contacts__title {
+    padding-left: 40px;
+  }
+
+  .contacts__address {
+    padding-right: 40px;
   }
 }
 
 @media (min-width: @width-desktop) {
   .contacts {
     .no-centering-wrapper(@width-desktop);
+
   }
 
   .contacts__wrapper {
