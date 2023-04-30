@@ -1,10 +1,9 @@
 .gift {
-  padding: 187px 56px 43px 56px;
+  padding: 187px 56px 43px 66px;
   background-color: @basic-green;
   background-image: url(../img/gift-background.jpg);
   background-repeat: no-repeat;
-  width: 280px;
-
+  background-size: cover;
 }
 
 .gift__description {
@@ -21,6 +20,33 @@
       width: 78px;
       height: 80px;
       top: -125px;
-      left: 35px;
+      left: 61px;
     }
+}
+
+@media (min-width: @width-tablet) {
+  .gift {
+      padding: 71px 124px 69px 422px;
+  }
+
+
+  .gift__description {
+    &::before {
+      top: -6px;
+      left: -327px;
+    }
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .gift {
+   padding:185px 43px 42px 41px;
+  }
+
+  .gift__description {
+    &::before {
+      top: -125px;
+      left: 61px;
+    }
+  }
 }

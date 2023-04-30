@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -9,16 +9,20 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="page__body">
   <header class="header">
-    <a class="trademark" href="index.html"><img src="img/trademark.svg" width="34" height="38"
-        alt="Торговый знак Кэт энерджи."></a>
-    <a class="logo" href="index.html"><img src="img/cat-logo.svg" width="101" height="18" alt="Логотип Кэт энерджи."></a>
-    <nav class="navigation">
-      <button class="navigation__button button"><span class="visually-hidden">Открыть или закрыть меню.</span></button>
-      <a class="navigation__link" href="index.html">Главная</a>
-      <a class="navigation__link navigation__link--current" href="catalog.html">Каталог продукции</a>
-      <a class="navigation__link" href="form.html">Подбор программы</a>
+    <div class="header__wrapper">
+      <a class="header__item trademark" href="index.html"><img src="img/trademark.svg" width="34" height="38" alt="Торговый знак Кэт энерджи."></a>
+      <a class="header__item logo" href="index.html"><img src="img/cat-logo.svg" width="101" height="18" alt="Логотип Кэт энерджи."></a>
+    </div>
+
+    <nav class="header__item header__item--navigation navigation">
+      <button class="navigation__button button button--navigation"><span class="visually-hidden">Открыть или закрыть меню.</span></button>
+      <div class="navigation__wrapper">
+        <a class="navigation__link" href="index.html">Главная</a>
+        <a class="navigation__link navigation__link--current" href="catalog.html">Каталог продукции</a>
+        <a class="navigation__link" href="form.html">Подбор программы</a>
+      </div>
     </nav>
   </header>
   <main class="catalog">
@@ -28,11 +32,15 @@
       <article class="catalog__card product-сard">
         <img class="product-сard__picture" width="68" height="78" src="img/cat-energy-pro-500-chicken.jpg" alt="Порция корма с курицей весом 500 грамм.">
         <h3 class="product-сard__title title title--product-сard">Cat energy pro 500 г</h3>
-        <dl class="product-сard__list">
+        <dl class="product-сard__list product-сard__list--weight">
           <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
           <dd class="product-сard__value product-сard__value--weight description description--product-сard">500 г</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--taste">
           <dt class="product-сard__option product-сard__option--taste description description--product-сard">Вкус</dt>
           <dd class="product-сard__value product-сard__value--taste description description--product-сard">Курица</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--price">
           <dt class="product-сard__option product-сard__option--price description description--product-сard">Цена</dt>
           <dd class="product-сard__value product-сard__value--price description description--product-сard">700 р</dd>
         </dl>
@@ -117,7 +125,7 @@
         <button class="product-сard__button button">Заказать</button>
       </article>
       <article class="catalog__card product-сard">
-        <img class="product-сard__picture" width="30" height="30" src="img/plus.svg" alt="Заместитель товара.">
+        <img class="product-сard__picture product-сard__picture--show-all" width="30" height="30" src="img/plus.svg" alt="Заместитель товара.">
         <h3 class="product-сard__title  product-сard__title--show-all title title--product-сard">Показать еще 100500 товаров</h3>
         <span class="product-сard__value product-сard__value--show-all description--product-сard">На самом деле вкусов гораздо больше!</span>
         <button class="product-сard__button button button--show-all">Показать все</button><!--Возможно ссылка Подумать!-->
@@ -158,11 +166,12 @@
         </dl>
         <button class="additional-catalog__button  button button--additional">Заказать</button>
       </article>
+      <!--Блок каталога Подарок-->
+      <div class="additional-catalog__gift  gift">
+        <p class="gift__description description description--gift">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
+      </div>
     </section>
-    <!--Блок каталога Подарок-->
-    <div class="catalog__gift  gift">
-      <p class="gift__description description description--gift">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
-    </div>
+
   </main>
   <footer class="footer">
     <!--Секция с картой -->
@@ -172,11 +181,11 @@
         <p class="contacts__title title title--contacts">Приглашаем к сотрудничеству дилеров!</p>
         <address class="contacts__address description description--address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
-
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6722.511226788325!2d30.31935606713698!3d59.93853592395248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682414857742!5m2!1sru!2sru"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Расположение офиса компании на карте в Санкт-Петербурге."></iframe>
-
-      <img src="img/map.jpg" width="320" height="362" alt="Расположение офиса компании на карте в Санкт-Петербурге.">
+      <div class="contacts__wrapper-map">
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6722.511226788325!2d30.31935606713698!3d59.93853592395248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682414857742!5m2!1sru!2sru"
+        width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Расположение офиса компании на карте в Санкт-Петербурге."></iframe>
+        <img class="contacts__img-map" src="img/map.jpg" width="320" height="362" alt="Расположение офиса компании на карте в Санкт-Петербурге.">
+      </div>
     </section>
 
     <!--Секция Соц сети-->

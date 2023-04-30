@@ -114,5 +114,28 @@
 @media (min-width: @width-desktop) {
   .example {
     .centering-wrapper(@width-desktop);
+    display: flex;
+    flex-wrap: wrap;
+    border-top: none;
+  }
+
+  .example__container {
+    width: 500px;
+    padding-top: 69px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .example__slider {
+    width: 500px;
+    background-color: @basic-white;
+  }
+
+  .example__total {
+    flex-direction: row;
   }
 }
+
+
+

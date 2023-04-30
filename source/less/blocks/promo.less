@@ -7,6 +7,7 @@
 .promo__wrapper {
   background-image: url(../img/background-greencat-mobile.jpg);
   background-color: @basic-green-action;
+  background-repeat: no-repeat;
   padding-top: 27px;
 }
 
@@ -86,6 +87,8 @@
 @media (min-width: @width-desktop) {
   .promo {
     .no-centering-wrapper(@width-desktop);
+    padding-left: 0;
+    padding-right: 0;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
   }
@@ -101,12 +104,24 @@
 
   .promo__image {
     grid-area: 1 / 2 / 4 / 3;
+    background-color: @basic-green;
+    margin-top: -125px;
+    padding-top: 125px;
+    background-image: url(/img/background-greencat-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -54px -62px;
   }
 
   .promo__button {
     grid-area: 3 / 1 / 4 / 2;
     z-index: 1;
     text-align: center;
+  }
+
+  .promo__wrapper {
+    z-index: 1;
+    background-color: inherit;
   }
 
 
