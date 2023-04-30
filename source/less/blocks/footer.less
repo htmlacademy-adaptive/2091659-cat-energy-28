@@ -1,0 +1,15 @@
+.footer {
+  .no-centering-wrapper(@width-mobile);
+  background-color: @basic-grey;
+}
+@media (min-width: @width-tablet) {
+  .footer {
+    .no-centering-wrapper(@width-tablet);
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .footer {
+    .no-centering-wrapper(@width-desktop);
+  }
+}

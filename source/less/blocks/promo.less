@@ -1,54 +1,94 @@
 .promo {
-  padding-top: 27px;
+  .no-centering-wrapper(@width-mobile);
   text-align: center;
-  background-color: @basic-grey-description;
+  padding-bottom: 20px;
+}
+
+.promo__wrapper {
+  background-image: url(../img/background-greencat-mobile.jpg);
+  background-color: @basic-green-action;
+  background-repeat: no-repeat;
+  padding-top: 27px;
 }
 
 .promo__slogan {
-  margin-top: 25px;
+  padding-top: 25px;
+  padding-bottom: 173px;
 }
 
 .promo__image {
   display: block;
-  margin-top: 29px;
+  margin-top: -130px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
 }
 
 .promo__button {
   display: block;
   margin-top: 3px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: @width-tablet) {
   .promo {
+    .centering-wrapper(@width-tablet);
     padding-top: 62px;
     text-align: start;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
+    padding-top: 62px;
+  }
+
+  .promo__wrapper {
+    background-image: none;
+    background-color: @basic-white;
+    grid-area: 1 / 1 / 2 / 3;
+    padding-top: 0;
+    padding-left: 88px;
+
+
   }
 
   .promo__title {
-    grid-area: 1 / 1 / 2 / 3;
+    padding-top: 0;
+
   }
 
   .promo__slogan {
-    margin-top: 41px;
-    grid-area: 2 / 1 / 3 / 3;
+    padding-top: 41px;
+    padding-bottom: 0;
+
   }
 
+
   .promo__image {
-    grid-area: 3 / 1 / 5 / 3;
+    grid-area: 2 / 1 / 3 / 3;
+    margin-top: 20px;
+    margin-bottom: 0;
+    width: 709px;
+    height: 609px;
   }
 
   .promo__button {
-    grid-area: 3 / 1 / 4 / 2;
+    grid-area: 2 / 1 / 3 / 2;
     z-index: 1;
     text-align: center;
+    align-self: baseline;
+    margin-top: 49px;
+    margin-left: 88px;
+    margin-right: 0;
   }
 }
 
 @media (min-width: @width-desktop) {
   .promo {
+    .no-centering-wrapper(@width-desktop);
+    padding-left: 0;
+    padding-right: 0;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
   }
@@ -64,12 +104,24 @@
 
   .promo__image {
     grid-area: 1 / 2 / 4 / 3;
+    background-color: @basic-green;
+    margin-top: -125px;
+    padding-top: 125px;
+    background-image: url(/img/background-greencat-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -54px -62px;
   }
 
   .promo__button {
     grid-area: 3 / 1 / 4 / 2;
     z-index: 1;
     text-align: center;
+  }
+
+  .promo__wrapper {
+    z-index: 1;
+    background-color: inherit;
   }
 
 

@@ -1,27 +1,141 @@
 .example {
+  .centering-wrapper(@width-mobile);
   padding-top: 25px;
+  background-color: @secondary-grey-background;
 }
 
 .example__description {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.example__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .example__advantages {
   margin-top: 0;
   margin-bottom: 0;
-  padding:20px 0;
+  padding:15px 0;
+  border: 1px solid @basic-grey-border;
+  border-radius: 4px;
+  width: 124px;
+  text-align: center;
+  position: relative;
+}
+
+.example__term{
+
+  &--advantages {
+    width: 77px;
+    position: absolute;
+    bottom: -14px;
+    left: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color:@secondary-grey-background;
+  }
 }
 
 .example__value {
   margin-left: 0;
 }
 
+.example__total {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
 @media (min-width: @width-tablet) {
+  .example {
+    .no-centering-wrapper(@width-tablet);
+    padding-left: 0;
+    padding-right: 0;
+    background-color: @basic-white;
+    border-top: 1px solid @secondary-grey-navigation;
+  }
+
+  .example__container {
+    .centering-wrapper(@width-tablet);
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 99px;
+
+  }
+
+  .example__description {
+    padding-top: 63px;
+    padding-bottom: 54px;
+  }
+
+  .example__slider {
+    background-color: @secondary-grey-background;
+    position: relative;
+    padding-top: 200px;
+  }
+
+  .example__term{
+
+    &--advantages {
+     background-color:@basic-white;
+    }
+  }
+
+  .example__wrapper {
+    column-gap: 42px;
+    margin-right: auto;
+
+  }
+
+  .example__total {
+    flex-direction: column;
+  }
+
+  .example__term {
+    align-self: flex-end;
+  }
+
+  .example__value {
+    align-self: flex-end;
+  }
+
 
 }
 
 @media (min-width: @width-desktop) {
+  .example {
+    .centering-wrapper(@width-desktop);
+    display: flex;
+    flex-wrap: wrap;
+    border-top: none;
+  }
 
+  .example__container {
+    width: 500px;
+    padding-top: 69px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .example__slider {
+    width: 500px;
+    background-color: @basic-white;
+  }
+
+  .example__total {
+    flex-direction: row;
+  }
 }
+
+
+
