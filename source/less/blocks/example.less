@@ -2,6 +2,21 @@
   .centering-wrapper(@width-mobile);
   padding-top: 25px;
   background-color: @secondary-grey-background;
+
+  @media (min-width: @width-tablet) {
+    .no-centering-wrapper(@width-tablet);
+    padding-left: 0;
+    padding-right: 0;
+    background-color: @basic-white;
+    border-top: 1px solid @secondary-grey-navigation;
+  }
+
+  @media (min-width: @width-desktop) {
+    .centering-wrapper(@width-desktop);
+    display: flex;
+    flex-wrap: wrap;
+    border-top: none;
+  }
 }
 
 .example__description {
@@ -9,12 +24,39 @@
   margin-bottom: 0;
   padding-top: 40px;
   padding-bottom: 20px;
+
+  @media (min-width: @width-tablet) {
+    padding-top: 63px;
+    padding-bottom: 54px;
+  }
+}
+
+.example__container {
+  @media (min-width: @width-tablet) {
+    .centering-wrapper(@width-tablet);
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 99px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 500px;
+    padding-top: 69px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .example__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: @width-tablet) {
+    column-gap: 42px;
+    margin-right: auto;
+  }
 }
 
 .example__advantages {
@@ -28,8 +70,21 @@
   position: relative;
 }
 
-.example__term{
+.example__slider {
+  @media (min-width: @width-tablet) {
+    padding-right: 104px;
+    padding-bottom: 101px;
+    padding-left: 104px;
+    background: linear-gradient( to top, @secondary-grey-background 77%, @basic-white 23%);
 
+  }
+
+  @media (min-width: @width-desktop) {
+
+  }
+}
+
+.example__term{
   &--advantages {
     width: 77px;
     position: absolute;
@@ -39,10 +94,22 @@
     padding-right: 5px;
     background-color:@secondary-grey-background;
   }
+
+  @media (min-width: @width-tablet) {
+    align-self: flex-end;
+
+    &--advantages {
+      background-color:@basic-white;
+    }
+  }
 }
 
 .example__value {
   margin-left: 0;
+
+  @media (min-width: @width-tablet) {
+    align-self: flex-end;
+  }
 }
 
 .example__total {
@@ -53,89 +120,12 @@
   margin-bottom: 0;
   padding-top: 40px;
   padding-bottom: 20px;
-}
 
-@media (min-width: @width-tablet) {
-  .example {
-    .no-centering-wrapper(@width-tablet);
-    padding-left: 0;
-    padding-right: 0;
-    background-color: @basic-white;
-    border-top: 1px solid @secondary-grey-navigation;
-  }
-
-  .example__container {
-    .centering-wrapper(@width-tablet);
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 99px;
-
-  }
-
-  .example__description {
-    padding-top: 63px;
-    padding-bottom: 54px;
-  }
-
-  .example__slider {
-    background-color: @secondary-grey-background;
-    position: relative;
-    padding-top: 200px;
-  }
-
-  .example__term{
-
-    &--advantages {
-     background-color:@basic-white;
-    }
-  }
-
-  .example__wrapper {
-    column-gap: 42px;
-    margin-right: auto;
-
-  }
-
-  .example__total {
+  @media (min-width: @width-tablet) {
     flex-direction: column;
   }
 
-  .example__term {
-    align-self: flex-end;
-  }
-
-  .example__value {
-    align-self: flex-end;
-  }
-
-
-}
-
-@media (min-width: @width-desktop) {
-  .example {
-    .centering-wrapper(@width-desktop);
-    display: flex;
-    flex-wrap: wrap;
-    border-top: none;
-  }
-
-  .example__container {
-    width: 500px;
-    padding-top: 69px;
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .example__slider {
-    width: 500px;
-    background-color: @basic-white;
-  }
-
-  .example__total {
+  @media (min-width: @width-desktop) {
     flex-direction: row;
   }
 }
-
-
-

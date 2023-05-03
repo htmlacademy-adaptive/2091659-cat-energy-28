@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="favicon.ico" sizes="any"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
 
   <body class="page__body">
@@ -32,7 +36,13 @@
           <h2 class="promo__title title title--promo">Функциональное питание&nbsp;для&nbsp;котов</h2>
           <p class="promo__slogan title title--slogan">Занялся собой? Займись котом!</p>
         </div>
-        <img class="promo__image" src="img/promo-image.png" width="280" height="270" alt="Упаковка функционального питания для котов из курицы.">
+        <figure class="promo__figure">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/promo-image-desktop.png 1x, img/promo-image-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/promo-image-tablet.png 1x, img/promo-image-tablet@2x.png 2x">
+            <img class="promo__image" src="img/promo-image.png" srcset="img/promo-image@2x.png 2x" width="280" height="270" alt="Упаковка функционального питания для котов из курицы.">
+          </picture>
+        </figure>
         <a class="promo__button button" href="form.html">Подобрать программу</a>
       </section>
 
@@ -92,18 +102,24 @@
           </dl>
         </div>
 
-
         <!--Слайдер с толстым и худым котом-->
         <div class="example__slider">
             <div class="slider">
-              <div class="slider__wrapper">
-                  <img class="slider__img-1" src="img/fat-cat1x.png" width="140" height="256" alt="Кот до приминения питания Кэт энерджи.">
-                  <img class="slider__img-2" src="img/slim-cat1x.png" width="280" height="256" alt="Кот после приминения питания Кэт энерджи.">
-                  <div class="slider__bar">
-                    <button class="slider__button button"><span class="visually-hidden">Двигать влево вправо.</span></button>
-                  </div>
+              <div class="slider__figure-slim">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/slim-cat-tablet@1x.png 1x, img/slim-cat-tablet@2x.png 2x">
+                  <img class="slider__img-1" src="img/slim-cat@1x.png" srcset="img/slim-cat@2x.png 2x" width="280" height="256" alt="Кот после приминения питания Кэт энерджи.">
+                </picture>
               </div>
-
+              <div class="slider__figure-fat">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/fat-cat-tablet@1x.png 1x, img/fat-cat-tablet@2x.png 2x">
+                  <img class="slider__img-2" src="img/fat-cat@1x.png" srcset="img/fat-cat@2x.png 2x" width="280" height="256" alt="Кот до приминения питания Кэт энерджи.">
+                </picture>
+              </div>
+              <div class="slider__bar">
+                <button class="slider__button button"><span class="visually-hidden">Двигать влево вправо.</span></button>
+              </div>
             </div>
         </div>
 

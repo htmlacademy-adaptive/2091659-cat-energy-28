@@ -18,6 +18,12 @@
     background-color: @basic-green-action;
     color: darken(@basic-white, 30%);
   }
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 14px 26px;
+  }
 }
 
 .button--navigation {
@@ -29,13 +35,4 @@
   &:active {
     background-color: darken(@basic-white, 40%);
   }
-}
-
-@media (min-width: @width-tablet) {
-  .button {
-    font-size: 20px;
-    line-height: 20px;
-    padding: 14px 26px;
-  }
-
 }

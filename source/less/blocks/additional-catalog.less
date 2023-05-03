@@ -6,6 +6,12 @@
   &::last-child {
     border-bottom: 1px solid @basic-grey-border;
   }
+
+  @media (min-width: @width-desktop) {
+    display: grid;
+    grid-template-columns: 896px 245px;
+    column-gap: 79px;
+  }
 }
 
 .additional-catalog__title {
@@ -16,6 +22,15 @@
   background-color: @basic-white;
   z-index: 1;
   width: 226px;
+
+  @media (min-width: @width-tablet) {
+    width: 395px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 380px;
+    grid-area: 1 / 1 / 2 / 3;
+  }
 
  }
 
@@ -31,6 +46,37 @@
     border-bottom: 1px solid @basic-grey-border;
   }
 
+  @media (min-width: @width-tablet) {
+    width: 708px;
+    grid-template-columns: 1fr 1fr;
+    padding: 26px 38px 28px;
+    width: 632px;
+    border: 1px solid @basic-grey-border;
+
+    &::not(:last-of-type) {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 895px;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 15px;
+    padding-bottom: 17px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
+.additional-catalog__button {
+  @media (min-width: @width-tablet) {
+    grid-area: 2 / 1 / 3 / 3 ;
+  }
+
+  @media (min-width: @width-desktop) {
+    grid-area: 1 / 3 / 2 / 4 ;
+  }
 }
 
 .additional-catalog__list {
@@ -44,55 +90,8 @@
   align-self: center;
 }
 
-
-@media (min-width: @width-tablet) {
-  .additional-catalog__card {
-    width: 708px;
-    grid-template-columns: 1fr 1fr;
-    padding: 26px 38px 28px;
-    width: 632px;
-    border: 1px solid @basic-grey-border;
-    &::not(:last-of-type) {
-      border-bottom: none;
-    }
-  }
-
-  .additional-catalog__button {
-    grid-area:2 / 1 /  3  / 3 ;
-  }
-
-  .additional-catalog__title {
-    width: 395px;
-  }
-
-}
-
-@media (min-width: @width-desktop) {
-  .additional-catalog {
-    display: grid;
-    grid-template-columns: 896px 245px;
-    column-gap: 79px;
-  }
-
-  .additional-catalog__card {
-    width: 895px;
-    grid-template-columns: repeat(3, 1fr);
-    padding-top: 15px;
-    padding-bottom: 17px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .additional-catalog__button {
-    grid-area:1 / 3 /  2  / 4 ;
-  }
-
-  .additional-catalog__title {
-    width: 380px;
-    grid-area: 1 / 1 / 2 / 3;
-  }
-
-  .additional-catalog__gift {
+.additional-catalog__gift {
+  @media (min-width: @width-desktop) {
     grid-area: 2 / 2 / 7 / 3;
   }
 }
