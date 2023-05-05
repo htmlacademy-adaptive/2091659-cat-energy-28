@@ -40,6 +40,10 @@
   @media (min-width: @width-tablet) {
     padding-left: 40px;
   }
+
+  @media (min-width: @width-desktop) {
+    background-color: @basic-white;
+  }
 }
 
 .contacts__address {
@@ -50,12 +54,24 @@
     text-align: end;
     padding-right: 40px;
   }
+
+  @media (min-width: @width-desktop) {
+    background-color: @basic-white;
+  }
 }
 
-.contacts__map {
-  z-index: 2;
+.contacts__figure {
+  margin: 0 auto;
+
+  @media (min-width: @width-tablet) {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .contacts__img-map {
-  margin-top: -150px;
+  @media (min-width: @width-tablet) {
+    width: 100%;
+    height: auto;
+  }
 }

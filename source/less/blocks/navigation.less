@@ -33,6 +33,20 @@
       }
     }
   }
+
+  @media (min-width: @width-desktop) {
+    &--inversion {
+      color: @basic-white;
+    }
+
+    &--current-inversion {
+
+      &::after {
+        background-color: @basic-white;
+      }
+    }
+
+  }
 }
 
 .navigation__wrapper {

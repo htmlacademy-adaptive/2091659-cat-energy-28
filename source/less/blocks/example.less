@@ -16,6 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     border-top: none;
+    background: linear-gradient( to top, @secondary-grey-background 77%, @basic-white 23%);
   }
 }
 
@@ -76,11 +77,11 @@
     padding-bottom: 101px;
     padding-left: 104px;
     background: linear-gradient( to top, @secondary-grey-background 77%, @basic-white 23%);
-
   }
 
   @media (min-width: @width-desktop) {
-
+    padding-right: 0;
+    background: none;
   }
 }
 
@@ -100,6 +101,12 @@
 
     &--advantages {
       background-color:@basic-white;
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    &--advantages {
+      background-color: transparent;
     }
   }
 }
