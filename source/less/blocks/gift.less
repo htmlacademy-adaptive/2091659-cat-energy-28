@@ -4,6 +4,14 @@
   background-image: url(../img/gift-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: @width-tablet) {
+    padding: 71px 124px 69px 422px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding:185px 43px 42px 41px;
+  }
 }
 
 .gift__description {
@@ -13,37 +21,24 @@
   text-align: center;
   position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url(../img/icon-gift.png);
-      width: 78px;
-      height: 80px;
-      top: -125px;
-      left: 61px;
-    }
-}
-
-@media (min-width: @width-tablet) {
-  .gift {
-      padding: 71px 124px 69px 422px;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../img/icon-gift.png);
+    width: 78px;
+    height: 80px;
+    top: -125px;
+    left: 61px;
   }
 
-
-  .gift__description {
+  @media (min-width: @width-tablet) {
     &::before {
       top: -6px;
       left: -327px;
     }
   }
-}
 
-@media (min-width: @width-desktop) {
-  .gift {
-   padding:185px 43px 42px 41px;
-  }
-
-  .gift__description {
+  @media (min-width: @width-desktop) {
     &::before {
       top: -125px;
       left: 61px;

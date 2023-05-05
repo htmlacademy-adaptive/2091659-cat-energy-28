@@ -1,6 +1,14 @@
 .contacts {
   .no-centering-wrapper(@width-mobile);
   background-color: @basic-white;
+
+  @media (min-width: @width-tablet) {
+    .no-centering-wrapper(@width-tablet);
+  }
+
+  @media (min-width: @width-desktop) {
+    .no-centering-wrapper(@width-desktop);
+  }
 }
 
 .contacts__wrapper {
@@ -8,62 +16,62 @@
   display: flex;
   flex-wrap: wrap;
   padding: 26px 0;
-}
 
-.contacts__title {
-  width: 139px;
-}
-
-.contacts__address {
-  width: 139px;
-}
-
-.contacts__map {
-  z-index: 2;
-}
-
-.contacts__img-map {
-  margin-top: -150px;
-}
-
-@media (min-width: @width-tablet) {
-  .contacts {
-    .no-centering-wrapper(@width-tablet);
-  }
-
-  .contacts__wrapper {
+  @media (min-width: @width-tablet) {
     .centering-wrapper(@width-tablet);
     justify-content: space-between;
     padding-top: 56px;
     padding-bottom: 56px;
   }
 
-  .contacts__address {
-    width: 170px;
-    text-align: end
-  }
-
-  .contacts__title {
-    padding-left: 40px;
-  }
-
-  .contacts__address {
-    padding-right: 40px;
-  }
-}
-
-@media (min-width: @width-desktop) {
-  .contacts {
-    .no-centering-wrapper(@width-desktop);
-
-  }
-
-  .contacts__wrapper {
+  @media (min-width: @width-desktop) {
     .centering-wrapper(@width-desktop);
     justify-content: flex-start;
     margin-bottom: -167px;
     z-index: 1;
     position: relative;
     padding-top: 90px;
+  }
+}
+
+.contacts__title {
+  width: 139px;
+
+  @media (min-width: @width-tablet) {
+    padding-left: 40px;
+  }
+
+  @media (min-width: @width-desktop) {
+    background-color: @basic-white;
+  }
+}
+
+.contacts__address {
+  width: 139px;
+
+  @media (min-width: @width-tablet) {
+    width: 170px;
+    text-align: end;
+    padding-right: 40px;
+  }
+
+  @media (min-width: @width-desktop) {
+    background-color: @basic-white;
+  }
+}
+
+.contacts__figure {
+  margin: 0 auto;
+
+  @media (min-width: @width-tablet) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.contacts__img-map {
+  @media (min-width: @width-tablet) {
+    width: 100%;
+    height: auto;
   }
 }

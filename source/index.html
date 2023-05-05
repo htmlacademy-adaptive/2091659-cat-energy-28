@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="favicon.ico" sizes="any"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
 
   <body class="page__body">
@@ -15,12 +19,12 @@
         <a class="header__item logo" href="index.html"><img src="img/cat-logo.svg" width="101" height="18" alt="Логотип Кэт энерджи."></a>
       </div>
 
-      <nav class="header__item header__item--navigation navigation">
+      <nav class="header__item header__item--navigation navigation with-js">
         <button class="navigation__button button button--navigation"><span class="visually-hidden">Открыть или закрыть меню.</span></button>
         <div class="navigation__wrapper">
-          <a class="navigation__link navigation__link--current" href="index.html">Главная</a>
-          <a class="navigation__link" href="catalog.html">Каталог продукции</a>
-          <a class="navigation__link" href="form.html">Подбор программы</a>
+          <a class="navigation__link navigation__link--inversion navigation__link--current  navigation__link--current-inversion" href="index.html">Главная</a>
+          <a class="navigation__link navigation__link--inversion" href="catalog.html">Каталог продукции</a>
+          <a class="navigation__link navigation__link--inversion" href="form.html">Подбор программы</a>
         </div>
       </nav>
     </header>
@@ -32,7 +36,13 @@
           <h2 class="promo__title title title--promo">Функциональное питание&nbsp;для&nbsp;котов</h2>
           <p class="promo__slogan title title--slogan">Занялся собой? Займись котом!</p>
         </div>
-        <img class="promo__image" src="img/promo-image.png" width="280" height="270" alt="Упаковка функционального питания для котов из курицы.">
+        <figure class="promo__figure">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/promo-image-desktop.png 1x, img/promo-image-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/promo-image-tablet.png 1x, img/promo-image-tablet@2x.png 2x">
+            <img class="promo__image" src="img/promo-image.png" srcset="img/promo-image@2x.png 2x" width="280" height="270" alt="Упаковка функционального питания для котов из курицы.">
+          </picture>
+        </figure>
         <a class="promo__button button" href="form.html">Подобрать программу</a>
       </section>
 
@@ -92,21 +102,26 @@
           </dl>
         </div>
 
-
         <!--Слайдер с толстым и худым котом-->
         <div class="example__slider">
             <div class="slider">
-              <div class="slider__wrapper">
-                  <img class="slider__img-1" src="img/fat-cat1x.png" width="140" height="256" alt="Кот до приминения питания Кэт энерджи.">
-                  <img class="slider__img-2" src="img/slim-cat1x.png" width="280" height="256" alt="Кот после приминения питания Кэт энерджи.">
-                  <div class="slider__bar">
-                    <button class="slider__button button"><span class="visually-hidden">Двигать влево вправо.</span></button>
-                  </div>
+              <div class="slider__figure-slim">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/slim-cat-tablet@1x.png 1x, img/slim-cat-tablet@2x.png 2x">
+                  <img class="slider__img-1" src="img/slim-cat@1x.png" srcset="img/slim-cat@2x.png 2x" width="280" height="256" alt="Кот после приминения питания Кэт энерджи.">
+                </picture>
               </div>
-
+              <div class="slider__figure-fat">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/fat-cat-tablet@1x.png 1x, img/fat-cat-tablet@2x.png 2x">
+                  <img class="slider__img-2" src="img/fat-cat@1x.png" srcset="img/fat-cat@2x.png 2x" width="280" height="256" alt="Кот до приминения питания Кэт энерджи.">
+                </picture>
+              </div>
+              <div class="slider__bar">
+                <button class="slider__button button"><span class="visually-hidden">Двигать влево вправо.</span></button>
+              </div>
             </div>
         </div>
-
       </section>
     </main>
     <footer class="footer">
@@ -118,9 +133,15 @@
           <address class="contacts__address description description--address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
         <div class="contacts__wrapper-map">
-          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6722.511226788325!2d30.31935606713698!3d59.93853592395248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682414857742!5m2!1sru!2sru"
+          <iframe class="contacts__map with-js--hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6722.511226788325!2d30.31935606713698!3d59.93853592395248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682414857742!5m2!1sru!2sru"
           width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Расположение офиса компании на карте в Санкт-Петербурге."></iframe>
-          <img class="contacts__img-map" src="img/map.jpg" width="320" height="362" alt="Расположение офиса компании на карте в Санкт-Петербурге.">
+          <figure class="contacts__figure">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <img class="contacts__img-map" src="img/map.jpg" srcset="img/map@2x.jpg 2x" width="320" height="362" alt="Расположение офиса компании на карте в Санкт-Петербурге.">
+            </picture>
+          </figure>
         </div>
       </section>
 

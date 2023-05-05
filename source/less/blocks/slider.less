@@ -1,10 +1,49 @@
 .slider {
+  width: 280px;
+  display: grid;
+  grid-template-columns: 1fr;
   position: relative;
+
+  @media (min-width: @width-tablet) {
+    width: 560px;
+  }
+
+  @media (min-width: @width-desktop) {
+
+  }
+}
+
+.slider__figure-slim {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.slider__figure-fat {
+  grid-area: 1 / 1 / 2 / 2;
+  z-index: 1;
+  width: 140px;
+  overflow: hidden;
+
+  @media (min-width: @width-tablet) {
+    width: 280px;
+  }
 }
 
 .slider__img-1 {
-  position: absolute;
-  background-color: @secondary-grey-background;
+  display: block;
+
+  @media (min-width: @width-tablet) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.slider__img-2 {
+  display: block;
+
+  @media (min-width: @width-tablet) {
+    width: 560px;
+    height: 512px;
+  }
 }
 
 .slider__bar {
@@ -15,8 +54,13 @@
   background-color: @slider-color;
   top: 50%;
   left: 50%;
-  transform: translateX(~"-50%") translateY(~"-50%");
+  transform: translateX(~"-100%") translateY(~"-50%");
   border-radius: 2px;
+  z-index: 2;
+
+  @media (min-width: @width-tablet) {
+    height: 512px;
+  }
 }
 
 .slider__button {
@@ -33,42 +77,37 @@
   background-position: 6px 8px;
 }
 
-@media (min-width: @width-tablet) {
-  .slider {
-    .centering-wrapper(@width-tablet);
-    position: absolute;
-    top: -57px;
-  }
+/*
+.slider__img-1 {
+  position: absolute;
+  background-color: @secondary-grey-background;
 
-  .slider__wrapper {
-    position: relative;
-    background-color: transparent;
-  }
-
-  .slider__img-1 {
+  @media (min-width: @width-tablet) {
     top: 50%;
     left: 50%;
     transform: translateX(~"-99%") translateY(~"-50%");
   }
+}
 
-  .slider__img-2 {
+.slider__img-2 {
+  @media (min-width: @width-tablet) {
     display: block;
     margin: 0 auto;
   }
+
 }
 
-@media (min-width: @width-desktop) {
-  .slider {
-    width: 500px;
-    padding: 0;
-    position: static;
-    padding-bottom: 384px;
-    background-color: @basic-grey;
-  }
-
-  .slider__wrapper {
-    position: absolute;
-    top: 134px;
-    left: 137px;
-  }
+.slider__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 18px;
+  border-radius: 50%;
+  transform: translateX(~"-50%") translateY(~"-50%");
+  border: 2px solid @slider-color;
+  background-color: @basic-white;
+  background-image: url(/img/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: 6px 8px;
 }
+*/

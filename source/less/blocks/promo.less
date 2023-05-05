@@ -2,26 +2,118 @@
   .no-centering-wrapper(@width-mobile);
   text-align: center;
   padding-bottom: 20px;
+
+  @media (min-width: @width-tablet) {
+    .centering-wrapper(@width-tablet);
+    padding-top: 62px;
+    text-align: start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 62px;
+  }
+
+  @media (min-width: @width-desktop) {
+    .no-centering-wrapper(@width-desktop);
+    padding-left: 0;
+    padding-right: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
 }
 
 .promo__wrapper {
   background-image: url(../img/background-greencat-mobile.jpg);
   background-color: @basic-green-action;
   background-repeat: no-repeat;
+  background-size: 320px auto;
   padding-top: 27px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(../img/background-greencat-mobile@2x.jpg);
+  }
+
+  @media (min-width: @width-tablet) {
+    background-image: none;
+    background-color: @basic-white;
+    grid-area: 1 / 1 / 2 / 2;
+    padding-top: 0;
+    padding-left: 88px;
+  }
+}
+
+.promo__title {
+  @media (min-width: @width-tablet) {
+    padding-top: 0;
+    padding-top: 0;
+  }
 }
 
 .promo__slogan {
   padding-top: 25px;
   padding-bottom: 173px;
+
+  @media (min-width: @width-tablet) {
+    padding-top: 41px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-top: 41px;
+    grid-area: 2 / 1 / 3 / 2;
+  }
+}
+
+.promo__figure {
+  margin-top: -130px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+
+  @media (min-width: @width-tablet) {
+    grid-area: 2 / 1 / 3 / 3;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 10px;
+  }
+
+  @media (min-width: @width-desktop) {
+    grid-area: 1 / 2 / 3 / 3;
+    padding-top: 0;
+    margin-top: -125px;
+    padding-top: 125px;
+    background-image: url(../img/background-greencat-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -54px -62px;
+    background-color: @basic-green;
+    width: 720px;
+    height: 694px;
+    position: relative;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/background-greencat-desktop@2x.jpg);
+    }
+  }
+
 }
 
 .promo__image {
   display: block;
-  margin-top: -130px;
   margin-right: auto;
-  margin-bottom: 10px;
   margin-left: auto;
+
+  @media (min-width: @width-tablet) {
+    width: 709px;
+    height: 609px;
+    display: block;
+  }
+
+  @media (min-width: @width-desktop) {
+    position: absolute;
+    left: -295px;
+    top: 103px;
+
+  }
 }
 
 .promo__button {
@@ -30,50 +122,8 @@
   width: 280px;
   margin-left: auto;
   margin-right: auto;
-}
 
-@media (min-width: @width-tablet) {
-  .promo {
-    .centering-wrapper(@width-tablet);
-    padding-top: 62px;
-    text-align: start;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
-    padding-top: 62px;
-  }
-
-  .promo__wrapper {
-    background-image: none;
-    background-color: @basic-white;
-    grid-area: 1 / 1 / 2 / 3;
-    padding-top: 0;
-    padding-left: 88px;
-
-
-  }
-
-  .promo__title {
-    padding-top: 0;
-
-  }
-
-  .promo__slogan {
-    padding-top: 41px;
-    padding-bottom: 0;
-
-  }
-
-
-  .promo__image {
-    grid-area: 2 / 1 / 3 / 3;
-    margin-top: 20px;
-    margin-bottom: 0;
-    width: 709px;
-    height: 609px;
-  }
-
-  .promo__button {
+  @media (min-width: @width-tablet){
     grid-area: 2 / 1 / 3 / 2;
     z-index: 1;
     text-align: center;
@@ -82,48 +132,17 @@
     margin-left: 88px;
     margin-right: 0;
   }
-}
 
-@media (min-width: @width-desktop) {
-  .promo {
-    .no-centering-wrapper(@width-desktop);
-    padding-left: 0;
-    padding-right: 0;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-  }
-
-  .promo__title {
-    grid-area: 1 / 1 / 2 / 2;
-  }
-
-  .promo__slogan {
-    margin-top: 41px;
-    grid-area: 2 / 1 / 3 / 2;
-  }
-
-  .promo__image {
-    grid-area: 1 / 2 / 4 / 3;
-    background-color: @basic-green;
-    margin-top: -125px;
-    padding-top: 125px;
-    background-image: url(/img/background-greencat-desktop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: -54px -62px;
-  }
-
-  .promo__button {
-    grid-area: 3 / 1 / 4 / 2;
+  @media (min-width: @width-desktop) {
+    grid-area: 2 / 1 / 3 / 3;
     z-index: 1;
     text-align: center;
   }
+}
 
-  .promo__wrapper {
+.promo__wrapper {
+  @media (min-width: @width-desktop) {
     z-index: 1;
     background-color: inherit;
   }
-
-
-
 }
