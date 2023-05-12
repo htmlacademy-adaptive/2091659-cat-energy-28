@@ -16,8 +16,17 @@
 <body class="page__body">
   <header class="header">
     <div class="header__wrapper">
-      <a class="header__item trademark" href="index.html"><img src="img/trademark.svg" width="34" height="38" alt="Торговый знак Кэт энерджи."></a>
-      <a class="header__item logo" href="index.html"><img src="img/cat-logo.svg" width="101" height="18" alt="Логотип Кэт энерджи."></a>
+      <a class="header__item trademark" href="index.html">
+        <figure class="header__figure">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/trademark-desktop.svg" width="71" height="60">
+            <source media="(min-width: 768px)" srcset="img/trademark-tablet.svg" width="61" height="50">
+            <img class="header__img" src="img/trademark-mobile.svg" width="34" height="38" alt="Торговый знак Кэт энерджи.">
+          </picture>
+        </figure>
+      </a>
+      <a class="header__item logo" href="index.html"><img class="header__img header__img--logo" src="img/cat-logo.svg" width="101" height="18" alt="Логотип Кэт энерджи.">
+      </a>
     </div>
 
     <nav class="header__item header__item--navigation navigation">
