@@ -1,0 +1,47 @@
+.additional {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 13px;
+
+  @media (min-width: @width-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 32px;
+  }
+
+}
+
+.additional__control {
+  padding-left: 46px;
+  position: relative;
+}
+
+.additional__mark {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 28px;
+  border: 1px solid @basic-grey-border;
+  top: -2px;
+  left: 0;
+}
+
+.additional__item {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.additional__input[type="checkbox"]:checked + .additional__mark {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 13px;
+    background-color: @basic-green;
+    border-radius: 50%;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}

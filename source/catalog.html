@@ -16,8 +16,17 @@
 <body class="page__body">
   <header class="header">
     <div class="header__wrapper">
-      <a class="header__item trademark" href="index.html"><img src="img/trademark.svg" width="34" height="38" alt="Торговый знак Кэт энерджи."></a>
-      <a class="header__item logo" href="index.html"><img src="img/cat-logo.svg" width="101" height="18" alt="Логотип Кэт энерджи."></a>
+      <a class="header__item trademark" href="index.html">
+        <figure class="header__figure">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/trademark-desktop.svg" width="71" height="60">
+            <source media="(min-width: 768px)" srcset="img/trademark-tablet.svg" width="61" height="50">
+            <img class="header__img" src="img/trademark-mobile.svg" width="34" height="38" alt="Торговый знак Кэт энерджи.">
+          </picture>
+        </figure>
+      </a>
+      <a class="header__item logo" href="index.html"><img class="header__img header__img--logo" src="img/cat-logo.svg" width="101" height="18" alt="Логотип Кэт энерджи.">
+      </a>
     </div>
 
     <nav class="header__item header__item--navigation navigation">
@@ -30,7 +39,7 @@
     </nav>
   </header>
   <main class="catalog">
-    <h1 class="catalog__title title">Каталог продукции</h1>
+    <h1 class="catalog__title title title--catalog">Каталог продукции</h1>
     <!--Секция каталога с основным товаром-->
     <section class="catalog__main">
       <article class="catalog__card product-сard">
@@ -61,21 +70,25 @@
           <picture>
             <source media="(min-width: 1200px)" srcset="img/cat-energy-pro-1000-chicken-desktop.png 1x, img/cat-energy-pro-1000-chicken-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/cat-energy-pro-1000-chicken-tablet.png 1x, img/cat-energy-pro-1000-chicken-tablet@2x.png 2x">
-            <img class="product-сard__picture" width="84" height="100" src="img/cat-energy-pro-1000-chicken.jpg" srcset="img/cat-energy-pro-1000-chicken@2x.png 2x" alt="Порция корма с курицей весом 1кг.">
+            <img class="product-сard__picture product-сard__picture--big" width="84" height="100" src="img/cat-energy-pro-1000-chicken.jpg" srcset="img/cat-energy-pro-1000-chicken@2x.png 2x" alt="Порция корма с курицей весом 1кг.">
           </picture>
         </figure>
         <h3 class="product-сard__title title title--product-сard">Cat energy pro 1000 г</h3>
-        <dl class="product-сard__list">
-          <dt class="product-сard__option description description--product-сard">Масса</dt>
-          <dd class="product-сard__value description description--product-сard">1000 г</dd>
-          <dt class="product-сard__option description description--product-сard">Вкус</dt>
-          <dd class="product-сard__value description description--product-сard">Курица</dd>
-          <dt class="product-сard__option description description--product-сard">Цена</dt>
-          <dd class="product-сard__value description description--product-сard">1000 р</dd>
+        <dl class="product-сard__list product-сard__list--weight">
+          <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
+          <dd class="product-сard__value product-сard__value--weight description description--product-сard">1000 г</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--taste">
+          <dt class="product-сard__option product-сard__option--taste description description--product-сard">Вкус</dt>
+          <dd class="product-сard__value product-сard__value--taste description description--product-сard">Курица</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--price">
+          <dt class="product-сard__option product-сard__option--price description description--product-сard">Цена</dt>
+          <dd class="product-сard__value product-сard__value--price description description--product-сard">1000 р</dd>
         </dl>
         <button class="product-сard__button button">Заказать</button>
       </article>
-      <article class="catalog__card product-сard">.
+      <article class="catalog__card product-сard">
         <figure class="product-сard_figure">
           <picture>
             <source media="(min-width: 1200px)" srcset="img/cat-energy-pro-500-fish-desktop.png 1x, img/cat-energy-pro-500-fish-desktop@2x.png 2x">
@@ -84,14 +97,18 @@
            </picture>
         </figure>
         <h3 class="product-сard__title title title--product-сard">Cat energy pro 500 г</h3>
-        <dl class="product-сard__list">
-          <dt class="product-сard__option description description--product-сard">Масса</dt>
-          <dd class="product-сard__value description description--product-сard">500 г</dd>
-          <dt class="product-сard__option description description--product-сard">Вкус</dt>
-          <dd class="product-сard__value description description--product-сard">Рыба</dd>
-          <dt class="product-сard__option description description--product-сard">Цена</dt>
-          <dd class="product-сard__value description description--product-сard">700 р</dd>
-        </dl>
+          <dl class="product-сard__list product-сard__list--weight">
+            <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
+            <dd class="product-сard__value product-сard__value--weight description description--product-сard">500 г</dd>
+          </dl>
+          <dl class="product-сard__list product-сard__list--taste">
+            <dt class="product-сard__option product-сard__option--taste description description--product-сard">Вкус</dt>
+            <dd class="product-сard__value product-сard__value--taste description description--product-сard">Рыба</dd>
+          </dl>
+          <dl class="product-сard__list product-сard__list--price">
+            <dt class="product-сard__option product-сard__option--price description description--product-сard">Цена</dt>
+            <dd class="product-сard__value product-сard__value--price description description--product-сard">700 р</dd>
+          </dl>
         <button class="product-сard__button button">Заказать</button>
       </article>
       <article class="catalog__card product-сard">
@@ -99,17 +116,21 @@
           <picture>
             <source media="(min-width: 1200px)" srcset="img/cat-energy-pro-1000-fish-desktop.png 1x, img/cat-energy-pro-1000-fish-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/cat-energy-pro-1000-fish-tablet.png 1x, img/cat-energy-pro-1000-fish-tablet@2x.png 2x">
-            <img class="product-сard__picture" width="84" height="100" src="img/cat-energy-pro-1000-fish.jpg" srcset="img/cat-energy-pro-1000-fish@2x.png 2x" alt="Порция корма с рыбой весом 1кг.">
+            <img class="product-сard__picture product-сard__picture--big" width="84" height="100" src="img/cat-energy-pro-1000-fish.jpg" srcset="img/cat-energy-pro-1000-fish@2x.png 2x" alt="Порция корма с рыбой весом 1кг.">
            </picture>
         </figure>
         <h3 class="product-сard__title title title--product-сard">Cat energy pro 1000 г</h3>
-        <dl class="product-сard__list">
-          <dt class="product-сard__option description description--product-сard">Масса</dt>
-          <dd class="product-сard__value description description--product-сard">1000 г</dd>
-          <dt class="product-сard__option description description--product-сard">Вкус</dt>
-          <dd class="product-сard__value description description--product-сard">Рыба</dd>
-          <dt class="product-сard__option description description--product-сard">Цена</dt>
-          <dd class="product-сard__value description description--product-сard">1000 р</dd>
+        <dl class="product-сard__list product-сard__list--weight">
+          <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
+          <dd class="product-сard__value product-сard__value--weight description description--product-сard">1000 г</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--taste">
+          <dt class="product-сard__option product-сard__option--taste description description--product-сard">Вкус</dt>
+          <dd class="product-сard__value product-сard__value--taste description description--product-сard">Рыба</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--price">
+          <dt class="product-сard__option product-сard__option--price description description--product-сard">Цена</dt>
+          <dd class="product-сard__value product-сard__value--price description description--product-сard">1000 р</dd>
         </dl>
         <button class="product-сard__button button">Заказать</button>
       </article>
@@ -122,13 +143,17 @@
            </picture>
         </figure>
         <h3 class="product-сard__title title title--product-сard">Cat energy slim 500 г</h3>
-        <dl class="product-сard__list">
-          <dt class="product-сard__option description description--product-сard">Масса</dt>
-          <dd class="product-сard__value description description--product-сard">500 г</dd>
-          <dt class="product-сard__option description description--product-сard">Вкус</dt>
-          <dd class="product-сard__value description description--product-сard">Гречка</dd>
-          <dt class="product-сard__option description description--product-сard">Цена</dt>
-          <dd class="product-сard__value description description--product-сard">400 р</dd>
+        <dl class="product-сard__list product-сard__list--weight">
+          <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
+          <dd class="product-сard__value product-сard__value--weight description description--product-сard">500 г</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--taste">
+          <dt class="product-сard__option product-сard__option--taste description description--product-сard">Вкус</dt>
+          <dd class="product-сard__value product-сard__value--taste description description--product-сard">Гречка</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--price">
+          <dt class="product-сard__option product-сard__option--price description description--product-сard">Цена</dt>
+          <dd class="product-сard__value product-сard__value--price description description--product-сard">400 р</dd>
         </dl>
         <button class="product-сard__button button">Заказать</button>
       </article>
@@ -137,17 +162,21 @@
           <picture>
             <source media="(min-width: 1200px)" srcset="img/cat-energy-pro-1000-buckwheat-desktop.png 1x, img/cat-energy-pro-1000-buckwheat-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/cat-energy-pro-1000-buckwheat-tablet.png 1x, img/cat-energy-pro-1000-buckwheat-tablet@2x.png 2x">
-            <img class="product-сard__picture" width="84" height="100" src="img/cat-energy-pro-1000-buckwheat.jpg" srcset="img/cat-energy-pro-1000-buckwheat@2x.png 2x" alt="Порция корма с гречкой весом 1 кг.">
+            <img class="product-сard__picture product-сard__picture--big" width="84" height="100" src="img/cat-energy-pro-1000-buckwheat.jpg" srcset="img/cat-energy-pro-1000-buckwheat@2x.png 2x" alt="Порция корма с гречкой весом 1 кг.">
            </picture>
         </figure>
         <h3 class="product-сard__title title title--product-сard">Cat energy slim 1000 г</h3>
-        <dl class="product-сard__list">
-          <dt class="product-сard__option description description--product-сard">Масса</dt>
-          <dd class="product-сard__value description description--product-сard">1000 г</dd>
-          <dt class="product-сard__option description description--product-сard">Вкус</dt>
-          <dd class="product-сard__value description description--product-сard">Гречка</dd>
-          <dt class="product-сard__option description description--product-сard">Цена</dt>
-          <dd class="product-сard__value description description--product-сard">700 р</dd>
+        <dl class="product-сard__list product-сard__list--weight">
+          <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
+          <dd class="product-сard__value product-сard__value--weight description description--product-сard">1000 г</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--taste">
+          <dt class="product-сard__option product-сard__option--taste description description--product-сard">Вкус</dt>
+          <dd class="product-сard__value product-сard__value--taste description description--product-сard">Гречка</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--price">
+          <dt class="product-сard__option product-сard__option--price description description--product-сard">Цена</dt>
+          <dd class="product-сard__value product-сard__value--price description description--product-сard">700 р</dd>
         </dl>
         <button class="product-сard__button button">Заказать</button>
       </article>
@@ -160,24 +189,28 @@
            </picture>
         </figure>
         <h3 class="product-сard__title title title--product-сard">Cat energy slim 500 г</h3>
-        <dl class="product-сard__list">
-          <dt class="product-сard__option description description--product-сard">Масса</dt>
-          <dd class="product-сard__value description description--product-сard">500 г</dd>
-          <dt class="product-сard__option description description--product-сard">Вкус</dt>
-          <dd class="product-сard__value description description--product-сard">Рис</dd>
-          <dt class="product-сard__option description description--product-сard">Цена</dt>
-          <dd class="product-сard__value description description--product-сard">500 р</dd>
+        <dl class="product-сard__list product-сard__list--weight">
+          <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
+          <dd class="product-сard__value product-сard__value--weight description description--product-сard">500 г</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--taste">
+          <dt class="product-сard__option product-сard__option--taste description description--product-сard">Вкус</dt>
+          <dd class="product-сard__value product-сard__value--taste description description--product-сard">Рис</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--price">
+          <dt class="product-сard__option product-сard__option--price description description--product-сard">Цена</dt>
+          <dd class="product-сard__value product-сard__value--price description description--product-сard">500 р</dd>
         </dl>
         <button class="product-сard__button button">Заказать</button>
       </article>
-      <article class="catalog__card product-сard">
+      <article class="catalog__card product-сard product-сard--show-all">
         <figure class="product-сard_figure product-сard_figure--show-all">
           <picture>
             <img class="product-сard__picture product-сard__picture--show-all" width="30" height="30" src="img/plus.svg" alt="Заместитель товара.">
            </picture>
         </figure>
-        <h3 class="product-сard__title  product-сard__title--show-all title title--product-сard">Показать еще 100500 товаров</h3>
-        <span class="product-сard__value product-сard__value--show-all description--product-сard">На самом деле вкусов гораздо больше!</span>
+        <h3 class="product-сard__title  product-сard__title--show-all title title--product-сard-all">Показать еще 100500 товаров</h3>
+        <span class="product-сard__value product-сard__value--show-all description description--product-сard">На самом деле вкусов гораздо больше!</span>
         <button class="product-сard__button button button--show-all">Показать все</button><!--Возможно ссылка Подумать!-->
       </article>
     </section>

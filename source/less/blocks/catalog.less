@@ -31,6 +31,7 @@
 
 .catalog__additional {
   .centering-wrapper(@width-mobile);
+
   position: relative;
   &::before {
     content: "";
@@ -39,7 +40,7 @@
     left: 0;
     right: 0;
     background-color: #68B738;
-    top: 44px;
+    top: 120px;
   }
 
   @media (min-width: @width-tablet) {
@@ -48,10 +49,25 @@
 
   @media (min-width: @width-desktop) {
     .centering-wrapper(@width-desktop);
+    padding-top: 75px;
+    padding-bottom: 86px;
   }
 }
 
 .catalog__title {
   padding: 27px 41px 41px 20px;
+
+  @media (min-width: @width-tablet) {
+    .centering-wrapper(@width-tablet);
+    padding-top: 65px;
+    padding-bottom: 82px;
+    padding-left: 0;
+  }
+
+  @media (min-width: @width-desktop) {
+    .centering-wrapper(@width-desktop);
+    padding-top: 74px;
+    padding-bottom: 84px;
+  }
 }
 

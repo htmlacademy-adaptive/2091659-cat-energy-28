@@ -1,7 +1,7 @@
 .slider {
   width: 280px;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   position: relative;
 
   @media (min-width: @width-tablet) {
@@ -14,7 +14,13 @@
 }
 
 .slider__figure-slim {
-  grid-area: 1 / 1 / 2 / 2;
+  grid-area: 1 / 2 / 2 /3;
+  width: 140px;
+  overflow: hidden;
+
+  @media (min-width: @width-tablet) {
+    width: 280px;
+  }
 }
 
 .slider__figure-fat {
@@ -30,6 +36,7 @@
 
 .slider__img-1 {
   display: block;
+  transform: translateX(-50%);
 
   @media (min-width: @width-tablet) {
     width: 560px;

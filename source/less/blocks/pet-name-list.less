@@ -1,0 +1,29 @@
+.pet-name-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 14px;
+
+}
+
+.pet-name-list__item {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 13px;
+  flex-grow: 1;
+
+  @media (min-width: @width-tablet) {
+    min-width: 400px;
+  }
+}
+
+.pet-name-list__label {
+  align-self: center;
+}
+
+.pet-name-list__input {
+  flex-grow: 1;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  border: 1px solid @form-border;
+}
