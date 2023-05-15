@@ -26,29 +26,36 @@
   background-color: @basic-grey;
 
   &--slim {
-    background-image: url(../img/icon-slim.png);
-    background-repeat: no-repeat;
-    background-position: 19px 24px;
+    background-image: url(../img/icons/stek.svg#icon-slim);
     background-size: 50px 53px;
-  }
+    background-repeat: no-repeat;
+    background-position: 21px 23px;
 
-  @media (min-resolution: 2dppx) {
-    &--slim {
-    background-image: url('../img/icon-slim@2x.png');
+    @media (min-width: @width-tablet) {
+      background-size: 200px 211px;
+      background-position: 460px center
+    }
+
+    @media (min-width: @width-desktop) {
+      background-size: 100px 106px;
+      background-position: 52px 40px;
     }
   }
 
-
   &--pro {
-    background-image: url(../img/icon-pro.png);
-    background-repeat: no-repeat;
-    background-position: 14px 24px;
+    background-image: url(../img/icons/stek.svg#icon-pro);
     background-size: 67px 50px;
-  }
+    background-repeat: no-repeat;
+    background-position: 21px 23px;
 
-  @media (min-resolution: 2dppx) {
-    &--pro {
-    background-image: url('../img/icon-pro@2x.png');
+    @media (min-width: @width-tablet) {
+      background-size: 268px 200px;
+      background-position: 413px center
+    }
+
+    @media (min-width: @width-desktop) {
+      background-size: 134px 100px;
+      background-position: 52px 40px;
     }
   }
 
@@ -59,59 +66,11 @@
     flex-wrap: wrap;
     padding: 77px 316px 53px 52px;
     align-items: flex-start;
-
-    &--slim {
-      background-image: url(../img/icon-slim-tablet.png);
-      background-position: 438px 101px;
-      background-size: 200px 211px
-    }
-
-    @media (min-resolution: 2dppx) {
-      &--slim {
-      background-image: url('../img/icon-slim-tablet@2x.png');
-      }
-    }
-
-    &--pro {
-      background-image: url(../img/icon-pro-tablet.png);
-      background-position: 405px 101px;
-      background-size: 268px 200px
-    }
-
-    @media (min-resolution: 2dppx) {
-      &--pro {
-      background-image: url('../img/icon-pro-tablet@2x.png');
-      }
-    }
   }
 
   @media (min-width: @width-desktop) {
     width: 457px;
     padding: 77px 61px 55px 52px;
-
-    &--slim {
-      background-image: url(../img/icon-slim-desktop.png);
-      background-position: 60px 50px;
-      background-size: 100px 106px
-    }
-
-    @media (min-resolution: 2dppx) {
-      &--slim {
-      background-image: url('../img/icon-slim-desktop@2x.png');
-      }
-    }
-
-    &--pro {
-      background-image: url(../img/icon-pro-desktop.png);
-      background-position: 60px 50px;
-      background-size: 134px 100px
-    }
-
-    @media (min-resolution: 2dppx) {
-      &--pro {
-      background-image: url('../img/icon-pro-desktop@2x.png');
-      }
-    }
   }
 }
 
@@ -162,11 +121,11 @@
   &::after {
     position: absolute;
     content: "";
-    background-image: url(../img/program-arrow.svg);
+    background-image: url(../img/icons/stek.svg#icon-program-arrow);
     background-repeat: no-repeat;
     width: 43px;
-    height: 20px;
-    background-position: 10px 2px;
+    height: 34px;
+    background-position: 10px center;
   }
 
   @media (min-width: @width-tablet) {
