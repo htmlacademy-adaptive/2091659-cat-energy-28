@@ -31,6 +31,7 @@
 
 .catalog__additional {
   .centering-wrapper(@width-mobile);
+  padding: 0;
 
   position: relative;
   &::before {
@@ -40,7 +41,12 @@
     left: 0;
     right: 0;
     background-color: #68B738;
-    top: 120px;
+    top: 42px;
+    margin-right: calc((320px - 100vw)/2);
+
+    @media (min-width: @width-desktop) {
+      top: 125px;
+    }
   }
 
   @media (min-width: @width-tablet) {

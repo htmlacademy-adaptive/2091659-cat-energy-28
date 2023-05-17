@@ -125,7 +125,10 @@
     background-repeat: no-repeat;
     width: 43px;
     height: 34px;
-    background-position: 10px center;
+    //background-position: 10px -7px;
+    top:50%;
+    right: 50%;
+    transform: translateX(50%) translateY(12%);
   }
 
   @media (min-width: @width-tablet) {
@@ -134,5 +137,10 @@
     &::before {
       position: relative;
     }
+
+    &::after {
+      transform: translateX(250%) translateY(12%);
+    }
   }
+
 }
