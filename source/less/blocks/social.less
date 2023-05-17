@@ -59,50 +59,58 @@
       display: none;
     }
   }
-
-}
-
-.social__icon {
-  fill: @slider-color;
-
-  &--cat-logo {
-    fill: @secondary-black-contacts;
-  }
-
-  &--logo-html-academy {
-    fill: @basic-grey-description;
-  }
 }
 
 .social__link {
   display: flex;
   align-self: center;
 
-  &:hover .social__icon,
-  &:focus .social__icon {
-    fill: @basic-green;
+  &--vkontakte {
+    mask: url(../img/icons/stek.svg#vkontakte);
+    background-color: @slider-color;
+    width: 28px;
+    height: 22px;
+
+    &:hover,
+    :focus {
+      background-color: @basic-green;
+    }
+
+    &:active {
+      background-color: darken(@basic-green, 20%);
+    }
   }
 
-  &:active .social__icon {
-    opacity: 0.3;
+  &--youtube {
+    mask: url(../img/icons/stek.svg#youtube);
+    background-color: @slider-color;
+    width: 28px;
+    height: 22px;
+
+    &:hover,
+    :focus {
+      background-color: @basic-green;
+    }
+
+    &:active {
+      background-color: darken(@basic-green, 20%);
+    }
   }
 
-  &:hover .social__icon--cat-logo,
-  &:focus .social__icon--cat-logo {
-    fill: @cat-logo-colore;
-  }
+  &--telegram {
+    mask: url(../img/icons/stek.svg#telegram);
+    background-color: @slider-color;
+    width: 28px;
+    height: 22px;
 
-  &:active .social__icon--cat-logo {
-    fill: @cat-logo-colore-active;
-  }
+    &:hover,
+    :focus {
+      background-color: @basic-green;
+    }
 
-  &:hover .social__icon--logo-html-academy,
-  &:focus .social__icon--logo-html-academy {
-    fill: @basic-grey-description;
-  }
-
-  &:active .social__icon--logo-html-academy {
-    opacity: 0.3;
+    &:active {
+      background-color: darken(@basic-green, 20%);
+    }
   }
 
   &--logo {

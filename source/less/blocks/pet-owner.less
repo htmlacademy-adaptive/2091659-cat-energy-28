@@ -3,22 +3,99 @@
   flex-wrap: wrap;
   row-gap: 14px;
   column-gap: 10px;
+
+  @media (min-width: @width-desktop) {
+    column-gap: 78px;
+  }
 }
 
 .pet-owner__label {
   align-self: center;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  column-gap: 10px;
+
+  &--email {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 25%;
+      right: 10px;
+      mask: url(../img/icons/stek.svg#icon-email);
+      background-color: @basic-black;
+    }
+
+    &:hover {
+      &::after {
+        background-color: @secondary-black;
+      }
+    }
+    &:focus-within {
+      &::after {
+        background-color: @basic-green;
+      }
+    }
+  }
+
+  &--tel {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 25%;
+      right: 10px;
+      mask: url(../img/icons/stek.svg#icon-phone);
+      background-color: @basic-black;
+    }
+
+    &:hover {
+      &::after {
+        background-color: @secondary-black;
+      }
+    }
+    &:focus-within {
+      &::after {
+        background-color: @basic-green;
+      }
+    }
+  }
+
+  @media (min-width: @width-tablet) {
+    column-gap: 20px;
+  }
+}
+
+.pet-owner__span {
+  align-self: center;
 }
 
 .pet-owner__input {
-  flex-grow: 1;
   padding-top: 12px;
   padding-right: 40px;
   padding-bottom: 11px;
   padding-left: 13px;
-  border: 1px solid @basic-grey-border;
+  border: 1px solid @form-border;
+  flex-grow: 1;
 
   @media (min-width: @width-tablet) {
     min-width: 520px;
   }
 
+  @media (min-width: @width-desktop) {
+    min-width:auto;
+  }
 }
+
+.pet-owner__label:hover .pet-owner__input {
+  border: 1px solid @basic-grey-border;
+}
+
+.pet-owner__label:focus .pet-owner__input {
+  border: 1px solid @basic-grey-description;
+}
+
+

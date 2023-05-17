@@ -60,6 +60,19 @@
   &--pet-owner {
     padding-top: 26px;
     padding-bottom: 14px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      left: 0;
+      right: 0;
+      background-color: #68b738;
+      top: -60px;
+      margin-right: calc((320px - 100vw)/2);
+      margin-left: calc((320px - 100vw)/2);
+    }
 
     @media (min-width: @width-desktop) {
       grid-area: 3 / 1 / 4 / 3 ;
@@ -69,10 +82,24 @@
   &--comments {
     padding-top: 37px;
     padding-bottom: 10px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      left: 0;
+      right: 0;
+      background-color: #68b738;
+      top: -11px;
+      margin-right: calc((320px - 100vw)/2);
+      margin-left: calc((320px - 100vw)/2);
+    }
 
     @media (min-width: @width-tablet) {
       padding-bottom: 65px;
     }
+
     @media (min-width: @width-desktop) {
       grid-area: 4 / 1 / 5 / 3 ;
     }
@@ -81,6 +108,19 @@
   &--checkbox {
     padding-top: 13px;
     padding-bottom: 34px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      left: 0;
+      right: 0;
+      background-color: #68b738;
+      top: -50px;
+      margin-right: calc((320px - 100vw)/2);
+      margin-left: calc((320px - 100vw)/2);
+    }
 
     @media (min-width: @width-desktop) {
       grid-area: 5 / 1 / 6 / 3 ;
@@ -90,7 +130,6 @@
 
 .form__fieldset-title {
   padding-bottom: 39px;
-  min-width: 100%;
   padding-left: 0;
   padding-right: 0;
 
@@ -98,49 +137,22 @@
   &--pet-owner {
     padding-top: 26px;
     padding-bottom: 24px;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      height: 2px;
-      background-color: @basic-green;
-      top: 41px;
-      left: 0;
-      right: 0;
-    }
+    z-index: 1;
+    background-color: @basic-white;
+    width: 220px;
   }
 
   &--checkbox {
+    z-index: 1;
+    background-color: @basic-white;
     position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      height: 2px;
-      background-color: @basic-green;
-      top: 41px;
-      left: 0;
-      right: 0;
-    }
   }
-
-
 
   &--comments {
     padding-top: 23px;
     padding-bottom: 0;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      height: 2px;
-      background-color: @basic-green;
-      top: 41px;
-      left: 0;
-      right: 0;
-    }
+    z-index: 1;
+    background-color: @basic-white;
   }
 }
 
