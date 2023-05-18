@@ -1,17 +1,10 @@
 .contacts {
-  .no-centering-wrapper(@width-mobile);
+  margin: 0 auto;
   background-color: @basic-grey;
 
   &--view {
     background-color: @basic-white;
-  }
-
-  @media (min-width: @width-tablet) {
-    .no-centering-wrapper(@width-tablet);
-  }
-
-  @media (min-width: @width-desktop) {
-    .no-centering-wrapper(@width-desktop);
+    width: auto;
   }
 }
 
@@ -75,11 +68,6 @@
 
 .contacts__img-map {
   display: block;
-  //margin-left: calc((320px - 100vw)/2);
-  //margin-right: calc((320px - 100vw)/2);
-
-  @media (min-width: @width-tablet) {
-    width: 100%;
-    height: auto;
-  }
+  width: 100%;
+  height: auto;
 }

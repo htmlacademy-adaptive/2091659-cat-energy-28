@@ -121,14 +121,26 @@
   &::after {
     position: absolute;
     content: "";
-    background-image: url(../img/icons/stek.svg#icon-program-arrow);
-    background-repeat: no-repeat;
-    width: 43px;
-    height: 34px;
-    //background-position: 10px -7px;
-    top:50%;
-    right: 50%;
-    transform: translateX(50%) translateY(12%);
+    mask: url(../img/icons/stek.svg#icon-program-arrow);
+    background-color: @basic-black;
+    width: 24px;
+    height: 12px;
+    top: 40px;
+    left: 110px;
+  }
+
+  &:hover {
+    &::after {
+      width: 32px;
+    }
+  }
+
+  &:active {
+    color: @basic-black-hover;
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: @width-tablet) {
@@ -139,7 +151,8 @@
     }
 
     &::after {
-      transform: translateX(250%) translateY(12%);
+      top: 47px;
+      left: 125px;
     }
   }
 
