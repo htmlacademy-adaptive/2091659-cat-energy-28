@@ -15,6 +15,10 @@
     width: 89%;
     margin: 0 auto;
   }
+
+  @media (min-width: @width-desktop) {
+    width: 100%;
+  }
 }
 
 .comments__textarea {
@@ -29,5 +33,9 @@
     padding-top: 15px;
     padding-bottom: 10px;
     height: 171px;
+  }
+
+  @media (min-width: @width-desktop) {
+    border: 1px solid @form-border;
   }
 }

@@ -28,6 +28,8 @@
 
   @media (min-width: @width-desktop) {
     grid-area: 1 / 1 / 2 / 3 ;
+    padding-left: 0;
+    padding-top: 56px;
   }
 }
 
@@ -47,6 +49,7 @@
 
     @media (min-width: @width-desktop) {
       grid-area: 2 / 1 / 3 / 2 ;
+      padding-left: 0;
     }
   }
 
@@ -65,7 +68,8 @@
 
     @media (min-width: @width-desktop) {
       grid-area: 2 / 2 / 3 / 3 ;
-      padding-top: 66px;
+      padding-top: 144px;
+      padding-left: 45px;
     }
   }
 
@@ -84,6 +88,10 @@
       top: -46px;
       margin-right: calc((320px - 100vw)/2);
       margin-left: calc((320px - 100vw)/2);
+
+      @media (min-width: @width-desktop) {
+        top: -67px;
+      }
     }
 
     @media (min-width: @width-desktop) {
@@ -103,6 +111,7 @@
 
     @media (min-width: @width-desktop) {
       grid-area: 4 / 1 / 5 / 3 ;
+      padding-bottom: 70px;
     }
 
     &::after {
@@ -178,6 +187,14 @@
       padding-top: 55px;
       padding-bottom: 54px;
     }
+
+    @media (min-width: @width-desktop) {
+      padding-left: 0;
+      padding-top: 46px;
+
+    }
+
+
   }
 
   &--checkbox {
@@ -191,6 +208,10 @@
       width: 245px;
       padding-left: 40px;
     }
+
+    @media (min-width: @width-desktop) {
+      padding-left: 0;
+    }
   }
 
   &--comments {
@@ -203,6 +224,10 @@
     @media (min-width: @width-tablet) {
       padding-left: 39px;
       width: 217px;
+    }
+
+    @media (min-width: @width-desktop) {
+      padding-left: 0;
     }
   }
 }
@@ -220,6 +245,13 @@
   column-gap: 65px;
   }
 
+  @media (min-width: @width-desktop) {
+    grid-area: 6 / 1 / 7 / 3 ;
+    column-gap: 77px;
+    padding-left: 0;
+    padding-top: 38px;
+  }
+
 }
 
 .form__button {
@@ -227,8 +259,7 @@
     margin: 0;
   }
   @media (min-width: @width-desktop) {
-    grid-area: 6 / 1 / 7 / 2 ;
-    width: 90%;
+    width: 47%;
     margin: 0;
   }
 
@@ -247,7 +278,6 @@
   }
 
   @media (min-width: @width-desktop) {
-    grid-area: 6 / 2 / 7 / 3 ;
     text-align: start;
     margin-left: 0;
   }
