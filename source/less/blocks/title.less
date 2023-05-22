@@ -111,6 +111,11 @@
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
+
+    @media (min-width: @width-tablet) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   &--pet-name-list {
@@ -118,6 +123,10 @@
     line-height: 18px;
     text-transform: uppercase;
     color: @basic-grey-description;
+
+    @media (min-width: @width-tablet) {
+      font-size: 20px;
+    }
   }
 
   &--program-options {
@@ -155,6 +164,12 @@
   &--legend-checkbox {
     font-size: 24px;
     line-height: 26px;
+  }
+
+  &--control-label {
+    font-size: 16px;
+    line-height: 16px;
+
   }
 
   @media (min-width: @width-tablet) {
@@ -223,6 +238,36 @@
     &--product-сard-all {
       font-size: 20px;
       line-height: 22px;
+    }
+
+    &--control-label {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &--pet-owner {
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    &--owner-contacts {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &--textarea {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &--legend-checkbox {
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    &--checkbox {
+      font-size: 20px;
+      line-height: 30px;
     }
   }
 

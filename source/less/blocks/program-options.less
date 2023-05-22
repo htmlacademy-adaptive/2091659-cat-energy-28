@@ -1,3 +1,18 @@
+.program-options {
+  @media (min-width: @width-tablet) {
+    border: 1px solid @basic-grey-pseudo-footer-element;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    width: 500px;
+    padding-left: 24px;
+    padding-right: 104px;
+    padding-top: 14px;
+    padding-bottom: 26px;
+  }
+}
+
 .program-options__item {
   padding-top: 6px;
   padding-bottom: 2px;
@@ -6,6 +21,10 @@
 .program-options__control {
   position: relative;
   padding-left: 45px;
+
+  @media (min-width: @width-tablet) {
+    padding-left: 63px;
+  }
 }
 
 .program-options__control-input[type="radio"]:checked + .program-options__control-mark-radio {
@@ -19,6 +38,11 @@
     top:50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+
+    @media (min-width: @width-tablet) {
+      width: 18px;
+      height: 18px;
+    }
   }
 
 }
@@ -32,4 +56,11 @@
   border: 1px solid @basic-grey-border;
   top: -2px;
   left: 0;
+
+  @media (min-width: @width-tablet) {
+    width: 38px;
+    height: 38px;
+    top: -11px;
+    left: 2px;
+  }
 }
