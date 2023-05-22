@@ -18,22 +18,33 @@
   @media (min-width: @width-tablet) {
     .centering-wrapper(@width-tablet);
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 58px;
+    padding-bottom: 43px;
   }
 
   @media (min-width: @width-desktop) {
     .centering-wrapper(@width-desktop);
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
-    row-gap: 63px;
+    row-gap: 44px;
   }
 }
 
 .catalog__additional {
   .centering-wrapper(@width-mobile);
   padding: 0;
-
   position: relative;
+
+  @media (min-width: @width-tablet) {
+    .centering-wrapper(@width-tablet);
+  }
+
+  @media (min-width: @width-desktop) {
+    .centering-wrapper(@width-desktop);
+    padding-top: 46px;
+    padding-bottom: 86px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -44,20 +55,16 @@
     top: 42px;
     margin-right: calc((320px - 100vw)/2);
 
+    @media (min-width: @width-tablet) {
+      top:46px;
+    }
+
     @media (min-width: @width-desktop) {
-      top: 125px;
+      top: 98px;
     }
   }
 
-  @media (min-width: @width-tablet) {
-    .centering-wrapper(@width-tablet);
-  }
 
-  @media (min-width: @width-desktop) {
-    .centering-wrapper(@width-desktop);
-    padding-top: 75px;
-    padding-bottom: 86px;
-  }
 }
 
 .catalog__title {
@@ -65,15 +72,16 @@
 
   @media (min-width: @width-tablet) {
     .centering-wrapper(@width-tablet);
-    padding-top: 65px;
-    padding-bottom: 82px;
+    padding-top: 50px;
+    padding-bottom: 71px;
     padding-left: 0;
+    padding-right: 0;
   }
 
   @media (min-width: @width-desktop) {
     .centering-wrapper(@width-desktop);
-    padding-top: 74px;
-    padding-bottom: 84px;
+    padding-top: 57px;
+    padding-bottom: 67px;
   }
 }
 

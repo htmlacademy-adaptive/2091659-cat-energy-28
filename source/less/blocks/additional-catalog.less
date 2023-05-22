@@ -3,6 +3,10 @@
   flex-direction: column;
   flex-wrap: wrap;
 
+  @media (min-width: @width-tablet) {
+    padding-bottom: 81px;
+  }
+
   @media (min-width: @width-desktop) {
     display: grid;
     grid-template-columns: 896px 245px;
@@ -18,14 +22,21 @@
   background-color: @basic-white;
   z-index: 1;
   width: 226px;
+  padding-right: 19px;
 
   @media (min-width: @width-tablet) {
-    width: 395px;
+    width: 352px;
+    padding-left: 37px;
+    padding-bottom: 82px;
+    padding-top: 30px;
   }
 
   @media (min-width: @width-desktop) {
-    width: 380px;
+    width: 372px;
     grid-area: 1 / 1 / 2 / 3;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 79px;
   }
 
  }
@@ -35,8 +46,9 @@
   grid-template-columns: 1fr;
   width: 280px;
   padding-top: 13px;
-  padding-bottom: 19px;
+  padding-bottom: 15px;
   border-top: 1px solid @basic-grey-border;
+  row-gap: 15px;
 
   &:last-of-type {
     border-bottom: 1px solid @basic-grey-border;
@@ -46,8 +58,9 @@
     width: 708px;
     grid-template-columns: 1fr 1fr;
     padding: 26px 38px 28px;
-    width: 632px;
+    width: 630px;
     border: 1px solid @basic-grey-border;
+    row-gap: 23px;
 
     &::not(:last-of-type) {
       border-bottom: none;
@@ -56,7 +69,7 @@
 
   @media (min-width: @width-desktop) {
     width: 895px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 323px 323px 250px;
     padding-top: 15px;
     padding-bottom: 17px;
     padding-left: 0;
@@ -74,6 +87,7 @@
 
   @media (min-width: @width-desktop) {
     grid-area: 1 / 3 / 2 / 4 ;
+    justify-self: end;
   }
 }
 
@@ -82,9 +96,16 @@
   flex-wrap: wrap;
   border: none;
   justify-content: space-between;
+  margin: 0;
+
+  @media (min-width: @width-tablet) {
+    justify-content: flex-end;
+  }
 
   @media (min-width: @width-desktop) {
     padding-right: 20px;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -93,14 +114,23 @@
 }
 
 .additional-catalog__value {
+  @media (min-width: @width-tablet) {
+    margin-left: 54px;
+  }
+
   @media (min-width: @width-desktop) {
     width: 60px;
   }
 }
 
 .additional-catalog__gift {
-  margin-top: 35px;
+  margin-top: 39px;
   margin-bottom: 35px;
+
+  @media (min-width: @width-tablet) {
+    margin-top: 66px;
+    margin-bottom: 0;
+  }
 
 
   @media (min-width: @width-desktop) {

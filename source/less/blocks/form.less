@@ -19,7 +19,7 @@
 .form__title {
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 37px;
+  padding-bottom: 39px;
 
   @media (min-width: @width-desktop) {
     grid-area: 1 / 1 / 2 / 3 ;
@@ -41,8 +41,8 @@
   }
 
   &--radio {
-    padding-top: 22px;
-    padding-bottom: 19px;
+    padding-top: 1px;
+    padding-bottom: 23px;
     border-top: 1px solid @basic-grey-pseudo-footer-element;
     border-bottom: 1px solid @basic-grey-pseudo-footer-element;
 
@@ -67,9 +67,9 @@
       position: absolute;
       height: 2px;
       left: 0;
-      right: 0;
+      right: -20px;
       background-color: #68b738;
-      top: -60px;
+      top: -46px;
       margin-right: calc((320px - 100vw)/2);
       margin-left: calc((320px - 100vw)/2);
     }
@@ -80,8 +80,8 @@
   }
 
   &--comments {
-    padding-top: 37px;
-    padding-bottom: 10px;
+    padding-top: 39px;
+    padding-bottom: 21px;
     position: relative;
 
     &::after {
@@ -89,9 +89,9 @@
       position: absolute;
       height: 2px;
       left: 0;
-      right: 0;
+      right: -20px;
       background-color: #68b738;
-      top: -11px;
+      top: -10px;
       margin-right: calc((320px - 100vw)/2);
       margin-left: calc((320px - 100vw)/2);
     }
@@ -107,7 +107,7 @@
 
   &--checkbox {
     padding-top: 13px;
-    padding-bottom: 34px;
+    padding-bottom: 33px;
     position: relative;
 
     &::after {
@@ -115,9 +115,9 @@
       position: absolute;
       height: 2px;
       left: 0;
-      right: 0;
+      right: -20px;
       background-color: #68b738;
-      top: -50px;
+      top: -33px;
       margin-right: calc((320px - 100vw)/2);
       margin-left: calc((320px - 100vw)/2);
     }
@@ -130,29 +130,35 @@
 
 .form__fieldset-title {
   padding-bottom: 39px;
-  padding-left: 0;
-  padding-right: 0;
+
+
+  &--pet-name {
+    padding-right: 7px;
+  }
 
 
   &--pet-owner {
     padding-top: 26px;
-    padding-bottom: 24px;
+    padding-bottom: 9px;
     z-index: 1;
     background-color: @basic-white;
-    width: 220px;
+    width: 197px;
   }
 
   &--checkbox {
     z-index: 1;
     background-color: @basic-white;
     position: relative;
+    padding-bottom: 22px;
+    width: 160px;
   }
 
   &--comments {
-    padding-top: 23px;
+    padding-top: 10px;
     padding-bottom: 0;
     z-index: 1;
     background-color: @basic-white;
+    width: 139px
   }
 }
 

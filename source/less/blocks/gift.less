@@ -1,5 +1,5 @@
 .gift {
-  padding: 187px 56px 43px 66px;
+  padding: 187px 56px 43px 58px;
   background-color: @basic-green;
   background-image: url(../img/gift-background.jpg);
   background-repeat: no-repeat;
@@ -28,23 +28,23 @@
     background-size: 78px 80px;
     width: 78px;
     height: 80px;
-    top: -125px;
-    left: 40px;
-  }
+    top: -128px;
+    left: 43px;
 
-  @media (min-width: @width-tablet) {
-    &::before {
-      top: -6px;
-      left: -327px;
+    @media (min-width: @width-tablet) {
+      top: -14px;
+      left: -345px;
       width: 80px;
       height: 83px;
     }
-  }
 
-  @media (min-width: @width-desktop) {
-    &::before {
+    @media (min-width: @width-desktop) {
       top: -130px;
       left: 41px;
     }
+  }
+
+  @media (min-width: @width-tablet) {
+    text-align: start;
   }
 }

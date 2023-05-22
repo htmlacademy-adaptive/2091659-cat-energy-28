@@ -6,28 +6,47 @@
     background-color: @basic-white;
     width: auto;
   }
+
+  @media (min-width: @width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .contacts__wrapper {
   .centering-wrapper(@width-mobile);
   display: flex;
   flex-wrap: wrap;
-  padding: 26px 0;
+  padding-top: 26px;
+  padding-bottom: 25px;
 
   @media (min-width: @width-tablet) {
     .centering-wrapper(@width-tablet);
     justify-content: space-between;
-    padding-top: 56px;
-    padding-bottom: 56px;
+    padding-top: 55px;
+    padding-bottom: 61px;
   }
 
   @media (min-width: @width-desktop) {
     .centering-wrapper(@width-desktop);
-    justify-content: flex-start;
-    margin-bottom: -167px;
+    grid-area: 1/1/2/2;
     z-index: 1;
-    position: relative;
-    padding-top: 90px;
+    width: 419px;
+    align-self: baseline;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    padding-left: 81px;
+    padding-right: 58px;
+    margin-top: 101px;
+    background-color: white;
+    justify-content: space-between;
+    margin-right: 54px;
+  }
+}
+
+.contacts__wrapper-map {
+  @media (min-width: @width-desktop) {
+    grid-area: 1/1/2/3;
   }
 }
 
@@ -36,24 +55,46 @@
 
   @media (min-width: @width-tablet) {
     padding-left: 40px;
+    width: 180px;
   }
 
   @media (min-width: @width-desktop) {
     background-color: @basic-white;
+    padding-left: 0;
   }
 }
 
 .contacts__address {
+  display: flex;
+  flex-wrap: wrap;
   width: 139px;
 
   @media (min-width: @width-tablet) {
     width: 170px;
     text-align: end;
     padding-right: 40px;
+    justify-content: end;
   }
 
   @media (min-width: @width-desktop) {
     background-color: @basic-white;
+    padding-right: 0;
+    text-align: start;
+    justify-content: flex-start;
+    align-self: baseline;
+    row-gap: 21px;
+  }
+
+  &--street {
+    @media (min-width: @width-tablet) {
+      line-height:16px;
+    }
+  }
+
+  &--town {
+    @media (min-width: @width-tablet) {
+      align-self: flex-end;
+    }
   }
 }
 
@@ -70,4 +111,13 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+.contacts__map {
+  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: @width-tablet) {
+    height: 400px;
+  }
 }

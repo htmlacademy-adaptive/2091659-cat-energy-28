@@ -1,12 +1,15 @@
 .example {
   width: auto;
   padding-top: 25px;
+  padding-bottom: 41px;
   background-color: @secondary-grey-background;
 
   @media (min-width: @width-tablet) {
+    padding-top: 20px;
     padding-left: 0;
     padding-right: 0;
-    background: linear-gradient( to top, @secondary-grey-background 43%, @basic-white 23%);
+    padding-bottom: 0;
+    background: linear-gradient( to top, @secondary-grey-background 44%, @basic-white 23%);
     border-top: 1px solid @secondary-grey-navigation;
   }
 
@@ -21,12 +24,16 @@
 
   @media (min-width: @width-tablet) {
     .no-centering-wrapper(@width-tablet);
+    padding: 0;
   }
 
   @media (min-width: @width-desktop) {
     .centering-wrapper(@width-desktop);
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 29px;
+    padding-bottom: 53px;
   }
 }
 
@@ -40,6 +47,12 @@
     padding-top: 63px;
     padding-bottom: 54px;
   }
+
+  @media (min-width: @width-desktop) {
+    padding-top: 145px;
+    padding-right: 67px;
+    padding-bottom: 68px;
+  }
 }
 
 .example__container {
@@ -52,10 +65,10 @@
 
   @media (min-width: @width-desktop) {
     width: 500px;
-    padding-top: 69px;
     margin: 0;
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -65,8 +78,9 @@
   justify-content: space-between;
 
   @media (min-width: @width-tablet) {
-    column-gap: 42px;
+    column-gap: 47px;
     margin-right: auto;
+    align-items: center;
   }
 }
 
@@ -79,6 +93,14 @@
   width: 124px;
   text-align: center;
   position: relative;
+
+  @media (min-width: @width-tablet) {
+    padding-left: 14px;
+    padding-right: 19px;
+    display: flex;
+    align-self: baseline;
+    justify-content: center;
+  }
 }
 
 .example__slider {
@@ -91,10 +113,17 @@
   @media (min-width: @width-desktop) {
     padding-right: 0;
     background: none;
+    padding-bottom: 0;
   }
 }
 
 .example__term{
+  padding-left: 3px;
+
+  @media (min-width: @width-tablet) {
+    align-self: flex-end;
+  }
+
   &--advantages {
     width: 77px;
     position: absolute;
@@ -103,28 +132,39 @@
     padding-left: 5px;
     padding-right: 5px;
     background-color:@secondary-grey-background;
-  }
 
-  @media (min-width: @width-tablet) {
-    align-self: flex-end;
-
-    &--advantages {
+    @media (min-width: @width-tablet) {
       background-color:@basic-white;
+      width: 125px;
+      bottom: -10px;
+      left: 11px;
+    }
+
+    @media (min-width: @width-desktop) {
+      background-color: transparent;
     }
   }
 
-  @media (min-width: @width-desktop) {
-    &--advantages {
-      background-color: transparent;
+  &--total {
+    @media (min-width: @width-desktop) {
+      align-self: baseline;
     }
   }
 }
 
 .example__value {
   margin-left: 0;
+  padding-left: 5px;
 
-  @media (min-width: @width-tablet) {
-    align-self: flex-end;
+  &--total {
+    @media (min-width: @width-tablet) {
+      align-self: flex-end;
+      padding-top: 10px;
+    }
+
+    @media (min-width: @width-desktop) {
+      align-self: baseline;
+    }
   }
 }
 
@@ -134,14 +174,18 @@
   justify-content: center;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 40px;
+  padding-top: 34px;
   padding-bottom: 20px;
 
   @media (min-width: @width-tablet) {
     flex-direction: column;
+    padding-top: 11px;
   }
 
   @media (min-width: @width-desktop) {
     flex-direction: row;
+    width: 327px;
+    justify-content: space-between;
+    padding-top: 55px;
   }
 }
