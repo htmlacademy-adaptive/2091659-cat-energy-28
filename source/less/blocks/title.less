@@ -7,6 +7,12 @@
   margin-top: 0;
   margin-bottom: 0;
 
+  &--navigation {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
   &--promo {
     color: @basic-white;
   }
@@ -37,6 +43,7 @@
   &--advantages {
     font-size: 24px;
     line-height: 24px;
+    text-transform: uppercase;
   }
 
   &--total {
@@ -79,15 +86,25 @@
     color: @secondary-black;
   }
 
-  &--form {
-    font-size: 16px;
-    line-height: 18px;
+  &--form-title {
+    font-size: 36px;
+    line-height: 36px;
+
+    @media (min-width: @width-tablet) {
+      font-size: 60px;
+      line-height: 60px;
+    }
   }
 
   &--fieldset-slogan {
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
+
+    @media (min-width: @width-tablet) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   &--pet-name-list {
@@ -95,6 +112,10 @@
     line-height: 18px;
     text-transform: uppercase;
     color: @basic-grey-description;
+
+    @media (min-width: @width-tablet) {
+      font-size: 20px;
+    }
   }
 
   &--program-options {
@@ -134,7 +155,20 @@
     line-height: 26px;
   }
 
+  &--control-label {
+    font-size: 16px;
+    line-height: 16px;
+
+  }
+
   @media (min-width: @width-tablet) {
+    &--navigation {
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 400;
+    }
+
+
     &--catalog {
       font-size: 60px;
       line-height: 60px;
@@ -201,9 +235,45 @@
       font-size: 20px;
       line-height: 22px;
     }
+
+    &--control-label {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &--pet-owner {
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    &--owner-contacts {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &--textarea {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &--legend-checkbox {
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    &--checkbox {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   @media (min-width: @width-desktop) {
+    &--navigation {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+
     &--product-сard {
       line-height: 21px;
     }

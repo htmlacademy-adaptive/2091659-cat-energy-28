@@ -73,23 +73,12 @@ const svg = () =>
   .pipe(gulp.dest('build/img'));
 
   export function makeStack () {
-  return gulp.src(`source/img/icons/*.svg`)
-    .pipe(svgo())
-    .pipe(stacksvg({ output: `sprite` }))
-    .pipe(rename('stek.svg'))
-    .pipe(gulp.dest(`build/img/icons`));
-}
- /*
-export const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
-  .pipe(svgo())
-  .pipe(svgstore({
-    inLineSvg: true
-  }))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'));
+    .pipe(svgo())
+    .pipe(stacksvg({ output: 'sprite' }))
+    .pipe(rename('stek.svg'))
+    .pipe(gulp.dest('build/img/icons'));
 }
-*/
 
 //Copy
 const copy = (done) => {
@@ -150,7 +139,6 @@ export const build = gulp.series(
     //scripts,
     svg,
     makeStack,
-    //sprite,
     createWebp
   ),
 );
@@ -167,7 +155,6 @@ export default gulp.series(
     //scripts,
     svg,
     makeStack,
-    //sprite,
     createWebp
   ),
   gulp.series(

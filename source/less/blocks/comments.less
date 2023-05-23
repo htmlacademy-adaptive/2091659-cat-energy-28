@@ -3,17 +3,36 @@
   flex-wrap: wrap;
 }
 
-.comments__legend {
-
-}
-
 .comments__label {
   width: 100%;
   box-sizing: border-box;
+
+  @media (min-width: @width-tablet) {
+    width: 89%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 100%;
+  }
 }
 
 .comments__textarea {
   width: 100%;
   box-sizing: border-box;
   height: 150px;
+  padding-left: 14px;
+  padding-top: 9px;
+
+  @media (min-width: @width-tablet) {
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    height: 171px;
+    border: 1px solid @form-border
+  }
+
+  @media (min-width: @width-desktop) {
+    border: 1px solid @form-border;
+  }
 }

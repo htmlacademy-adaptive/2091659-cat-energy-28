@@ -1,11 +1,19 @@
 .pet-owner {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 14px;
+  row-gap: 16px;
   column-gap: 10px;
+
+  @media (min-width: @width-tablet) {
+    row-gap: 18px;
+    padding-top: 20px;
+    padding-bottom: 53px;
+    padding-right: 37px;
+  }
 
   @media (min-width: @width-desktop) {
     column-gap: 78px;
+    padding-right: 0;
   }
 }
 
@@ -15,6 +23,16 @@
   flex-grow: 1;
   display: flex;
   column-gap: 10px;
+  cursor: pointer;
+
+  @media (min-width: @width-tablet) {
+    padding-left: 40px;
+    column-gap: 20px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-left: 0;
+  }
 
   &--email {
     &::after {
@@ -23,9 +41,18 @@
       width: 20px;
       height: 20px;
       top: 25%;
-      right: 10px;
+      right: 15px;
       mask: url(../img/icons/stek.svg#icon-email);
       background-color: @basic-black;
+
+      @media (min-width: @width-tablet) {
+        top: 33%;
+        right: 18px;
+      }
+
+      @media (min-width: @width-desktop) {
+        right: 19px;
+      }
     }
 
     &:hover {
@@ -41,15 +68,33 @@
   }
 
   &--tel {
+
+    @media (min-width: @width-tablet) {
+      column-gap: 20px;
+    }
+
+    @media (min-width: @width-desktop) {
+      padding-left: 10px;
+    }
+
     &::after {
       content: "";
       position: absolute;
       width: 20px;
       height: 20px;
       top: 25%;
-      right: 10px;
+      right: 15px;
       mask: url(../img/icons/stek.svg#icon-phone);
       background-color: @basic-black;
+
+      @media (min-width: @width-tablet) {
+        top: 33%;
+        right: 18px;
+      }
+
+      @media (min-width: @width-desktop) {
+        right: 19px;
+      }
     }
 
     &:hover {
@@ -64,9 +109,7 @@
     }
   }
 
-  @media (min-width: @width-tablet) {
-    column-gap: 20px;
-  }
+
 }
 
 .pet-owner__span {
@@ -74,19 +117,37 @@
 }
 
 .pet-owner__input {
-  padding-top: 12px;
-  padding-right: 40px;
-  padding-bottom: 11px;
+  padding-top: 11px;
+  padding-right: 24px;
+  padding-bottom: 10px;
   padding-left: 13px;
   border: 1px solid @form-border;
   flex-grow: 1;
+  cursor: pointer;
 
   @media (min-width: @width-tablet) {
-    min-width: 520px;
+    min-width: 466px;
+    padding-left: 20px;
+    flex-grow: 1;
   }
 
   @media (min-width: @width-desktop) {
     min-width:auto;
+    flex-grow: 1;
+    padding-left: 31px;
+  }
+
+  &--email {
+    @media (min-width: @width-desktop) {
+      width: 237px;
+    }
+  }
+
+  &--tel {
+    @media (min-width: @width-desktop) {
+      width: 237px;
+    }
+
   }
 }
 

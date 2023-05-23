@@ -16,7 +16,7 @@
 
   @media (min-width: @width-desktop) {
     .centering-wrapper(@width-desktop);
-    padding: 66px 110px;;
+    padding: 69px 110px;;
   }
 }
 
@@ -28,6 +28,11 @@
   align-self: center;
   position: relative;
 
+  @media (min-width: @width-tablet) {
+    width: 133px;
+    margin-left: 25px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -36,6 +41,10 @@
     background-color: @basic-grey-pseudo-footer-element;
     left: -76px;
     top: 42px;
+
+    @media (min-width: @width-tablet)  {
+      display: none;
+    }
   }
 
   &::before {
@@ -46,16 +55,8 @@
     background-color: @basic-grey-pseudo-footer-element;
     left: -76px;
     top: -22px;
-  }
 
-  @media (min-width: @width-tablet)  {
-    position: static;
-
-    &::after {
-      display: none;
-    }
-
-    &::before {
+    @media (min-width: @width-tablet) {
       display: none;
     }
   }
@@ -114,19 +115,62 @@
   }
 
   &--logo {
+    mask: url(../img/icons/stek.svg#cat-logo);
     width: 128px;
+    height: 24px;
+    background-color: @secondary-black-contacts;
+
+    &:hover,
+    :focus {
+      background-color: @cat-logo-colore;
+    }
+
+    &:active {
+      background-color: @cat-logo-colore-active;
+    }
+
+    @media (min-width: @width-tablet) {
+      width: 143px;
+      height: 27px;
+    }
   }
 
   &--academy {
-    width: 280px;
-    display: flex;
-    justify-content: space-between;
+    mask: url(../img/icons/stek.svg#logo-html-academy);
+    width: 113px;
+    height: 19px;
+    background-color: @basic-grey-description;
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
-  @media (min-width: @width-tablet) {
-    &--academy{
-      justify-content: end;
-      column-gap: 28px;
+  &--trademark-html-academy {
+    mask: url(../img/icons/stek.svg#trademark-html-academy);
+    width: 27px;
+    height: 34px;
+    background-color: @slider-color;
+
+    &:hover,
+    :focus {
+      background-color: @basic-green;
+    }
+
+    &:active {
+      background-color: @basic-green;
+      opacity: 0.3;
     }
   }
 }
+
+.social__wrapper {
+  display: flex;
+  width: 281px;
+  justify-content: space-between;
+
+  @media (min-width: @width-tablet) {
+    width: 168px;
+  }
+}
+

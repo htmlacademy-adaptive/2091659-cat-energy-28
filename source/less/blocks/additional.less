@@ -6,12 +6,14 @@
 
   @media (min-width: @width-tablet) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 300px 300px;
     row-gap: 32px;
+    column-gap: 42px;
   }
 
   @media (min-width: @width-desktop) {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 90px;
   }
 
 }
@@ -19,6 +21,11 @@
 .additional__control {
   padding-left: 46px;
   position: relative;
+  display: flex;
+
+  @media (min-width: @width-tablet) {
+    padding-left: 55px;
+  }
 }
 
 .additional__mark {
@@ -27,33 +34,49 @@
   width: 28px;
   height: 28px;
   border: 1px solid @basic-grey-border;
-  top: -2px;
+  top: -8px;
   left: 0;
+
+  @media (min-width: @width-tablet) {
+    width: 38px;
+    height: 38px;
+    top: -5px;
+    left: -5px;
+  }
 }
 
 .additional__item {
   padding-top: 6px;
   padding-bottom: 6px;
+
+  @media (min-width: @width-tablet) {
+    padding-left: 44px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-left: 0;
+  }
 }
 
 .additional__input[type="checkbox"]:checked + .additional__mark {
   &::before {
     position: absolute;
     content: "";
-    width: 20px;
-    height: 16px;
+    width: 30px;
+    height: 30px;
     background-color: @basic-green;
     top:50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-28%) translateY(-19%);
     mask: url(../img/icons/stek.svg#icon-form-jackdaw);
     mask-repeat: no-repeat;
     mask-size: 18px 14px;
 
     @media (min-width: @width-tablet) {
-      width: 25px;
-      height: 20px;
-      mask-size: 24px 19px;
+      width: 36px;
+      height: 30px;
+      mask-size: 29px 26px;
+      transform: translateX(-37%) translateY(-43%);
     }
 
     @media (min-width: @width-desktop) {
@@ -62,4 +85,16 @@
       mask-size: 26px 26px;
     }
   }
+}
+
+.additional__control:hover .additional__mark {
+  border: 1px solid @input-hover;
+}
+
+.additional__control:focus .additional__mark {
+  border: 1px solid @input-hover;
+}
+
+.additional__control:disabled {
+  opacity: 30%;
 }
