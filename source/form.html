@@ -18,7 +18,7 @@
       <a class="header__item header__item--trademark trademark" href="index.html">
         <figure class="header__figure">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/trademark-desktop.svg" width="71" height="60">
+            <source media="(min-width: 1440px)" srcset="img/trademark-desktop.svg" width="71" height="60">
             <source media="(min-width: 768px)" srcset="img/trademark-tablet.svg" width="61" height="50">
             <img class="header__img" src="img/trademark-mobile.svg" width="34" height="38" alt="Торговый знак Кэт энерджи.">
           </picture>
@@ -28,7 +28,7 @@
       </a>
     </div>
 
-    <nav class="header__item header__item--navigation navigation navigation--nojs">
+    <nav class="header__item header__item--navigation navigation navigation--js-close">
       <button class="navigation__button button button--navigation"><span class="visually-hidden">Открыть или закрыть меню.</span></button>
       <div class="navigation__wrapper">
         <a class="navigation__link navigation__link title title--navigation" href="index.html">Главная</a>
@@ -87,11 +87,11 @@
         <legend class="form__fieldset-title form__fieldset-title--pet-owner title title--pet-owner">Контактные данные (владельца кота)</legend>
         <label class="pet-owner__label pet-owner__label--email title title--owner-contacts" for="email-pet-owner">
           <span class="pet-owner__span">E-mail:*</span>
-          <input class="pet-owner__input title title--owner-contacts" type="email" name="email-pet-owner" id="email-pet-owner" placeholder="E-mail" value="kuklachev@gmail.com" required>
+          <input class="pet-owner__input pet-owner__input--email title title--owner-contacts" type="email" name="email-pet-owner" id="email-pet-owner" placeholder="E-mail" value="kuklachev@gmail.com" required>
         </label>
         <label class="pet-owner__label pet-owner__label--tel title title--owner-contacts" for="tel-pet-owner">
           <span class="pet-owner__span">Телефон:*</span>
-          <input class="pet-owner__input title title--owner-contacts" type="tel"  name="tel-pet-owner" id="tel-pet-owner" pattern="8\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (111) 222-33-44" value="8 (960) 900-60-90" required>
+          <input class="pet-owner__input pet-owner__input--tel title title--owner-contacts" type="tel"  name="tel-pet-owner" id="tel-pet-owner" pattern="8\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (111) 222-33-44" value="8 (960) 900-60-90" required>
         </label>
       </fieldset>
       <fieldset class="form__group form__group--comments comments">

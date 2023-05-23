@@ -18,7 +18,7 @@
       <a class="header__item header__item--trademark trademark" href="index.html">
         <figure class="header__figure">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/trademark-desktop.svg" width="71" height="60">
+            <source media="(min-width: 1440px)" srcset="img/trademark-desktop.svg" width="71" height="60">
             <source media="(min-width: 768px)" srcset="img/trademark-tablet.svg" width="61" height="50">
             <img class="header__img" src="img/trademark-mobile.svg" width="34" height="38" alt="Торговый знак Кэт энерджи.">
           </picture>
@@ -42,7 +42,8 @@
     <!--Секция каталога с основным товаром-->
     <section class="catalog__main">
       <article class="catalog__card product-сard product-сard--min">
-        <figure class="product-сard_figure">
+        <a class="product-сard__link-figure" href="#">
+          <figure class="product-сard_figure">
           <picture>
             <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-500-chicken-desktop.webp 1x, img/catalog/cat-energy-pro-500-chicken-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-500-chicken-tablet.webp 1x, img/catalog/cat-energy-pro-500-chicken-tablet@2x.webp 2x">
@@ -52,7 +53,10 @@
             <img class="product-сard__picture product-сard__picture--min" width="68" height="86" src="img/catalog/cat-energy-pro-500-chicken.jpg" srcset="img/catalog/cat-energy-pro-500-chicken@2x.png 2x"  alt="Порция корма с курицей весом 500 грамм.">
           </picture>
         </figure>
-        <h3 class="product-сard__title product-сard__title--min title title--product-сard">Cat energy pro 500 г</h3>
+        </a>
+        <a class="product-сard__link-title" href="#">
+          <h3 class="product-сard__title product-сard__title--min title title--product-сard">Cat energy pro 500 г</h3>
+        </a>
         <dl class="product-сard__list product-сard__list--weight">
           <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
           <dd class="product-сard__value product-сard__value--weight description description--product-сard">500 г</dd>
@@ -68,17 +72,21 @@
         <a class="product-сard__button product-сard__button--sale button button--product-сard" href="form.html">Заказать</a>
       </article>
       <article class="catalog__card product-сard product-сard--max">
-        <figure class="product-сard_figure">
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-1000-chicken-desktop.webp 1x, img/catalog/cat-energy-pro-1000-chicken-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-1000-chicken-tablet.webp 1x, img/catalog/cat-energy-pro-1000-chicken-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/catalog/cat-energy-pro-1000-chicken.webp 1x, img/catalog/cat-energy-pro-1000-chicken@2x.webp 2x">
-            <source media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-1000-chicken-desktop.png 1x, img/catalog/cat-energy-pro-1000-chicken-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-1000-chicken-tablet.png 1x, img/catalog/cat-energy-pro-1000-chicken-tablet@2x.png 2x">
-            <img class="product-сard__picture product-сard__picture--max" width="84" height="100" src="img/catalog/cat-energy-pro-1000-chicken.jpg" srcset="img/catalog/cat-energy-pro-1000-chicken@2x.png 2x" alt="Порция корма с курицей весом 1кг.">
-          </picture>
-        </figure>
-        <h3 class="product-сard__title product-сard__title--max title title--product-сard">Cat energy pro 1000 г</h3>
+        <a class="product-сard__link-figure" href="#">
+          <figure class="product-сard_figure">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-1000-chicken-desktop.webp 1x, img/catalog/cat-energy-pro-1000-chicken-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-1000-chicken-tablet.webp 1x, img/catalog/cat-energy-pro-1000-chicken-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/catalog/cat-energy-pro-1000-chicken.webp 1x, img/catalog/cat-energy-pro-1000-chicken@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-1000-chicken-desktop.png 1x, img/catalog/cat-energy-pro-1000-chicken-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-1000-chicken-tablet.png 1x, img/catalog/cat-energy-pro-1000-chicken-tablet@2x.png 2x">
+              <img class="product-сard__picture product-сard__picture--max" width="84" height="100" src="img/catalog/cat-energy-pro-1000-chicken.jpg" srcset="img/catalog/cat-energy-pro-1000-chicken@2x.png 2x" alt="Порция корма с курицей весом 1кг.">
+            </picture>
+          </figure>
+        </a>
+        <a class="product-сard__link-title" href="#">
+          <h3 class="product-сard__title product-сard__title--max title title--product-сard">Cat energy pro 1000 г</h3>
+        </a>
         <dl class="product-сard__list product-сard__list--weight">
           <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
           <dd class="product-сard__value product-сard__value--weight description description--product-сard">1000 г</dd>
@@ -94,43 +102,51 @@
         <a class="product-сard__button product-сard__button--sale button button--product-сard" href="form.html">Заказать</a>
       </article>
       <article class="catalog__card product-сard product-сard--min">
-        <figure class="product-сard_figure">
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-500-fish-desktop.webp 1x, img/catalog/cat-energy-pro-500-fish-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-500-fish-tablet.webp 1x, img/catalog/cat-energy-pro-500-fish-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/catalog/cat-energy-pro-500-fish.webp 1x, img/catalog/cat-energy-pro-500-fish@2x.webp 2x">
-            <source media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-500-fish-desktop.png 1x, img/catalog/cat-energy-pro-500-fish-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-500-fish-tablet.png 1x, img/catalog/cat-energy-pro-500-fish-tablet@2x.png 2x">
-            <img class="product-сard__picture product-сard__picture--min" width="68" height="86" src="img/catalog/cat-energy-pro-500-fish.jpg" srcset="img/catalog/cat-energy-pro-500-fish@2x.png 2x" alt="Порция корма с рыбой весом 500 грамм.">
-           </picture>
-        </figure>
-        <h3 class="product-сard__title product-сard__title--min title title--product-сard">Cat energy pro 500 г</h3>
-          <dl class="product-сard__list product-сard__list--weight">
-            <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
-            <dd class="product-сard__value product-сard__value--weight description description--product-сard">500 г</dd>
-          </dl>
-          <dl class="product-сard__list product-сard__list--taste">
-            <dt class="product-сard__option product-сard__option--taste description description--product-сard">Вкус</dt>
-            <dd class="product-сard__value product-сard__value--taste description description--product-сard">Рыба</dd>
-          </dl>
-          <dl class="product-сard__list product-сard__list--price">
-            <dt class="product-сard__option product-сard__option--price description description--product-сard">Цена</dt>
-            <dd class="product-сard__value product-сard__value--price description description--product-сard">700 &#8381;</dd>
-          </dl>
-          <a class="product-сard__button product-сard__button--sale button button--product-сard" href="form.html">Заказать</a>
+        <a class="product-сard__link-figure" href="#">
+          <figure class="product-сard_figure">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-500-fish-desktop.webp 1x, img/catalog/cat-energy-pro-500-fish-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-500-fish-tablet.webp 1x, img/catalog/cat-energy-pro-500-fish-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/catalog/cat-energy-pro-500-fish.webp 1x, img/catalog/cat-energy-pro-500-fish@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-500-fish-desktop.png 1x, img/catalog/cat-energy-pro-500-fish-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-500-fish-tablet.png 1x, img/catalog/cat-energy-pro-500-fish-tablet@2x.png 2x">
+              <img class="product-сard__picture product-сard__picture--min" width="68" height="86" src="img/catalog/cat-energy-pro-500-fish.jpg" srcset="img/catalog/cat-energy-pro-500-fish@2x.png 2x" alt="Порция корма с рыбой весом 500 грамм.">
+            </picture>
+          </figure>
+        </a>
+        <a class="product-сard__link-title" href="#">
+          <h3 class="product-сard__title product-сard__title--min title title--product-сard">Cat energy pro 500 г</h3>
+        </a>
+        <dl class="product-сard__list product-сard__list--weight">
+          <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
+          <dd class="product-сard__value product-сard__value--weight description description--product-сard">500 г</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--taste">
+          <dt class="product-сard__option product-сard__option--taste description description--product-сard">Вкус</dt>
+          <dd class="product-сard__value product-сard__value--taste description description--product-сard">Рыба</dd>
+        </dl>
+        <dl class="product-сard__list product-сard__list--price">
+          <dt class="product-сard__option product-сard__option--price description description--product-сard">Цена</dt>
+          <dd class="product-сard__value product-сard__value--price description description--product-сard">700 &#8381;</dd>
+        </dl>
+        <a class="product-сard__button product-сard__button--sale button button--product-сard" href="form.html">Заказать</a>
       </article>
       <article class="catalog__card product-сard product-сard--max">
-        <figure class="product-сard_figure">
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-1000-fish-desktop.webp 1x, img/catalog/cat-energy-pro-1000-fish-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-1000-fish-tablet.webp 1x, img/catalog/cat-energy-pro-1000-fish-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/catalog/cat-energy-pro-1000-fish.webp 1x, img/catalog/cat-energy-pro-1000-fish@2x.webp 2x">
-            <source media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-1000-fish-desktop.png 1x, img/catalog/cat-energy-pro-1000-fish-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-1000-fish-tablet.png 1x, img/catalog/cat-energy-pro-1000-fish-tablet@2x.png 2x">
-            <img class="product-сard__picture product-сard__picture--max" width="84" height="100" src="img/catalog/cat-energy-pro-1000-fish.jpg" srcset="img/catalog/cat-energy-pro-1000-fish@2x.png 2x" alt="Порция корма с рыбой весом 1кг.">
-           </picture>
-        </figure>
-        <h3 class="product-сard__title product-сard__title--max title title--product-сard">Cat energy pro 1000 г</h3>
+        <a class="product-сard__link-figure" href="#">
+          <figure class="product-сard_figure">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-1000-fish-desktop.webp 1x, img/catalog/cat-energy-pro-1000-fish-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-1000-fish-tablet.webp 1x, img/catalog/cat-energy-pro-1000-fish-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/catalog/cat-energy-pro-1000-fish.webp 1x, img/catalog/cat-energy-pro-1000-fish@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-1000-fish-desktop.png 1x, img/catalog/cat-energy-pro-1000-fish-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-1000-fish-tablet.png 1x, img/catalog/cat-energy-pro-1000-fish-tablet@2x.png 2x">
+              <img class="product-сard__picture product-сard__picture--max" width="84" height="100" src="img/catalog/cat-energy-pro-1000-fish.jpg" srcset="img/catalog/cat-energy-pro-1000-fish@2x.png 2x" alt="Порция корма с рыбой весом 1кг.">
+            </picture>
+          </figure>
+        </a>
+        <a class="product-сard__link-title" href="#">
+          <h3 class="product-сard__title product-сard__title--max title title--product-сard">Cat energy pro 1000 г</h3>
+        </a>
         <dl class="product-сard__list product-сard__list--weight">
           <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
           <dd class="product-сard__value product-сard__value--weight description description--product-сard">1000 г</dd>
@@ -146,17 +162,21 @@
         <a class="product-сard__button product-сard__button--sale button button--product-сard" href="form.html">Заказать</a>
       </article>
       <article class="catalog__card product-сard product-сard--min">
-        <figure class="product-сard_figure">
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-500-buckwheat-desktop.webp 1x, img/catalog/cat-energy-pro-500-buckwheat-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-500-buckwheat-tablet.webp 1x, img/catalog/cat-energy-pro-500-buckwheat-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/catalog/cat-energy-pro-500-buckwheat.webp 1x, img/catalog/cat-energy-pro-500-buckwheat@2x.webp 2x">
-            <source media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-500-buckwheat-desktop.png 1x, img/catalog/cat-energy-pro-500-buckwheat-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-500-buckwheat-tablet.png 1x, img/catalog/cat-energy-pro-500-buckwheat-tablet@2x.png 2x">
-            <img class="product-сard__picture product-сard__picture--min" width="68" height="86" src="img/catalog/cat-energy-pro-500-buckwheat.jpg" srcset="img/catalog/cat-energy-pro-500-buckwheat@2x.png 2x" alt="Порция корма с гречкой весом 500 грамм.">
-           </picture>
-        </figure>
-        <h3 class="product-сard__title product-сard__title--min title title--product-сard">Cat energy slim 500 г</h3>
+        <a class="product-сard__link-figure" href="#">
+          <figure class="product-сard_figure">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-500-buckwheat-desktop.webp 1x, img/catalog/cat-energy-pro-500-buckwheat-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-500-buckwheat-tablet.webp 1x, img/catalog/cat-energy-pro-500-buckwheat-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/catalog/cat-energy-pro-500-buckwheat.webp 1x, img/catalog/cat-energy-pro-500-buckwheat@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-500-buckwheat-desktop.png 1x, img/catalog/cat-energy-pro-500-buckwheat-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-500-buckwheat-tablet.png 1x, img/catalog/cat-energy-pro-500-buckwheat-tablet@2x.png 2x">
+              <img class="product-сard__picture product-сard__picture--min" width="68" height="86" src="img/catalog/cat-energy-pro-500-buckwheat.jpg" srcset="img/catalog/cat-energy-pro-500-buckwheat@2x.png 2x" alt="Порция корма с гречкой весом 500 грамм.">
+            </picture>
+          </figure>
+        </a>
+        <a class="product-сard__link-title" href="#">
+          <h3 class="product-сard__title product-сard__title--min title title--product-сard">Cat energy slim 500 г</h3>
+        </a>
         <dl class="product-сard__list product-сard__list--weight">
           <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
           <dd class="product-сard__value product-сard__value--weight description description--product-сard">500 г</dd>
@@ -172,17 +192,21 @@
         <a class="product-сard__button product-сard__button--sale button button--product-сard" href="form.html">Заказать</a>
       </article>
       <article class="catalog__card product-сard product-сard--max">
-        <figure class="product-сard_figure">
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-1000-buckwheat-desktop.webp 1x, img/catalog/cat-energy-pro-1000-buckwheat-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-1000-buckwheat-tablet.webp 1x, img/catalog/cat-energy-pro-1000-buckwheat-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/catalog/cat-energy-pro-1000-buckwheat.webp 1x, img/catalog/cat-energy-pro-1000-buckwheat@2x.webp 2x">
-            <source media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-1000-buckwheat-desktop.png 1x, img/catalog/cat-energy-pro-1000-buckwheat-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-1000-buckwheat-tablet.png 1x, img/catalog/cat-energy-pro-1000-buckwheat-tablet@2x.png 2x">
-            <img class="product-сard__picture product-сard__picture--max" width="84" height="100" src="img/catalog/cat-energy-pro-1000-buckwheat.jpg" srcset="img/catalog/cat-energy-pro-1000-buckwheat@2x.png 2x" alt="Порция корма с гречкой весом 1 кг.">
-           </picture>
-        </figure>
-        <h3 class="product-сard__title product-сard__title--max title title--product-сard">Cat energy slim 1000 г</h3>
+        <a class="product-сard__link-figure" href="#">
+          <figure class="product-сard_figure">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-1000-buckwheat-desktop.webp 1x, img/catalog/cat-energy-pro-1000-buckwheat-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-1000-buckwheat-tablet.webp 1x, img/catalog/cat-energy-pro-1000-buckwheat-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/catalog/cat-energy-pro-1000-buckwheat.webp 1x, img/catalog/cat-energy-pro-1000-buckwheat@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-1000-buckwheat-desktop.png 1x, img/catalog/cat-energy-pro-1000-buckwheat-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-1000-buckwheat-tablet.png 1x, img/catalog/cat-energy-pro-1000-buckwheat-tablet@2x.png 2x">
+              <img class="product-сard__picture product-сard__picture--max" width="84" height="100" src="img/catalog/cat-energy-pro-1000-buckwheat.jpg" srcset="img/catalog/cat-energy-pro-1000-buckwheat@2x.png 2x" alt="Порция корма с гречкой весом 1 кг.">
+            </picture>
+          </figure>
+        </a>
+        <a class="product-сard__link-title" href="#">
+          <h3 class="product-сard__title product-сard__title--max title title--product-сard">Cat energy slim 1000 г</h3>
+        </a>
         <dl class="product-сard__list product-сard__list--weight">
           <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
           <dd class="product-сard__value product-сard__value--weight description description--product-сard">1000 г</dd>
@@ -198,17 +222,21 @@
         <a class="product-сard__button product-сard__button--sale button button--product-сard" href="form.html">Заказать</a>
       </article>
       <article class="catalog__card product-сard product-сard--min">
-        <figure class="product-сard_figure">
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-500-rice-desktop.webp 1x, img/catalog/cat-energy-pro-500-rice-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-500-rice-tablet.webp 1x, img/catalog/cat-energy-pro-500-rice-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/catalog/cat-energy-pro-500-rice.webp 1x, img/catalog/cat-energy-pro-500-rice@2x.webp 2x">
-            <source media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-500-rice-desktop.png 1x, img/catalog/cat-energy-pro-500-rice-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-500-rice-tablet.png 1x, img/catalog/cat-energy-pro-500-rice-tablet@2x.png 2x">
-            <img class="product-сard__picture product-сard__picture--min" width="68" height="86" src="img/catalog/cat-energy-pro-500-rice.jpg" srcset="img/catalog/cat-energy-pro-500-rice@2x.png 2x" alt="Порция корма с рисом весом 500 грамм.">
-           </picture>
-        </figure>
-        <h3 class="product-сard__title product-сard__title--min title title--product-сard">Cat energy slim 500 г</h3>
+        <a class="product-сard__link-figure" href="#">
+          <figure class="product-сard_figure">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-500-rice-desktop.webp 1x, img/catalog/cat-energy-pro-500-rice-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-500-rice-tablet.webp 1x, img/catalog/cat-energy-pro-500-rice-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/catalog/cat-energy-pro-500-rice.webp 1x, img/catalog/cat-energy-pro-500-rice@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/catalog/cat-energy-pro-500-rice-desktop.png 1x, img/catalog/cat-energy-pro-500-rice-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/cat-energy-pro-500-rice-tablet.png 1x, img/catalog/cat-energy-pro-500-rice-tablet@2x.png 2x">
+              <img class="product-сard__picture product-сard__picture--min" width="68" height="86" src="img/catalog/cat-energy-pro-500-rice.jpg" srcset="img/catalog/cat-energy-pro-500-rice@2x.png 2x" alt="Порция корма с рисом весом 500 грамм.">
+            </picture>
+          </figure>
+        </a>
+        <a class="product-сard__link-title" href="#">
+          <h3 class="product-сard__title product-сard__title--min title title--product-сard">Cat energy slim 500 г</h3>
+        </a>
         <dl class="product-сard__list product-сard__list--weight">
           <dt class="product-сard__option product-сard__option--weight description description--product-сard">Масса</dt>
           <dd class="product-сard__value product-сard__value--weight description description--product-сard">500 г</dd>
@@ -224,12 +252,18 @@
         <a class="product-сard__button product-сard__button--sale button button--product-сard" href="form.html">Заказать</a>
       </article>
       <article class="catalog__card product-сard product-сard--show-all">
-        <figure class="product-сard_figure product-сard_figure--show-all">
-          <picture>
-            <img class="product-сard__picture product-сard__picture--show-all" width="30" height="30" src="img/plus.svg" alt="Заместитель товара.">
-           </picture>
+        <a class="product-сard__link-figure product-сard__link-figure--show-all" href="#">
+          <figure class="product-сard_figure product-сard_figure--show-all">
+            <picture>
+              <img class="product-сard__picture product-сard__picture--show-all" width="30" height="30" src="img/plus.svg" alt="Заместитель товара.">
+            </picture>
         </figure>
-        <h3 class="product-сard__title  product-сard__title--show-all title title--product-сard-all">Показать еще 100500 товаров</h3>
+        </a>
+
+        <a class="product-сard__link-title product-сard__link-title--show-all" href="#">
+          <h3 class="product-сard__title  product-сard__title--show-all title title--product-сard-all">Показать еще 100500 товаров</h3>
+        </a>
+
         <span class="product-сard__value product-сard__value--show-all description description--show-all">На самом деле вкусов гораздо больше!</span>
         <a class="product-сard__button button button--show-all" href="fresh.html">Показать все</a>
       </article>

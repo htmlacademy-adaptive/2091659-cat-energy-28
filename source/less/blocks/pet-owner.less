@@ -118,7 +118,7 @@
 
 .pet-owner__input {
   padding-top: 12px;
-  padding-right: 40px;
+  padding-right: 24px;
   padding-bottom: 11px;
   padding-left: 13px;
   border: 1px solid @form-border;
@@ -135,6 +135,19 @@
     min-width:auto;
     flex-grow: 1;
     padding-left: 31px;
+  }
+
+  &--email {
+    @media (min-width: @width-desktop) {
+      width: 237px;
+    }
+  }
+
+  &--tel {
+    @media (min-width: @width-desktop) {
+      width: 237px;
+    }
+
   }
 }
 

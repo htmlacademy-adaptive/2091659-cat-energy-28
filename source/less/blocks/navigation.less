@@ -119,13 +119,17 @@
 }
 
 
-.navigation--js-close .navigation__wrapper {
-  display: none;
+//Открытое меню в потоке при отключённом JavaScript.
 
-  @media (min-width: @width-tablet) {
-    display: block;
-  }
+.navigation--nojs .navigation__button {
+  opacity: 0;
 }
+
+.navigation--nojs .navigation__wrapper {
+  display: flex;
+}
+
+//Открытое меню вне потока при включённом JavaScript.
 
 .navigation--js-open .navigation__wrapper {
   display: flex;
@@ -226,11 +230,9 @@
   opacity: 1;
 }
 
-.navigation--nojs .navigation__button {
-  opacity: 0;
-}
+//Закрытое меню.
 
-.navigation--nojs .navigation__wrapper {
-  display: flex;
+.navigation--js-close .navigation__wrapper {
+  display: none;
 }
 
