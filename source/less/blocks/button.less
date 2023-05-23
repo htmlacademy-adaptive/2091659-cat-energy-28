@@ -29,10 +29,12 @@
     background-color: @basic-white;
 
     &:hover {
-      background-color: darken(@basic-white, 20%);
+      background-color: @basic-white;
+      opacity: 80%;
     }
     &:active {
-      background-color: darken(@basic-white, 40%);
+      background-color: @basic-white;
+      opacity: 60%;
     }
   }
 
@@ -67,6 +69,14 @@
     @media (min-width: @width-desktop) {
       padding-left: 35px;
       padding-right: 35px;
+    }
+
+    &:hover {
+      background-color: @catalog-border-grey;
+    }
+    &:active {
+      background-color: @catalog-border-grey;
+      color: darken(@basic-white, 30%);
     }
   }
 

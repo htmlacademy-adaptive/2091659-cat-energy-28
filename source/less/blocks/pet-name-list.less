@@ -42,6 +42,17 @@
   @media (min-width: @width-tablet) {
     padding-left: 22px;
   }
+  &:hover {
+    border: 1px solid @basic-grey-border;
+  }
+
+  &:focus {
+    border: 1px solid @basic-grey-description;
+  }
+
+  &:disabled {
+    opacity: 30%;
+  }
 }
 
 .pet-name-list__input::-webkit-outer-spin-button,
@@ -50,3 +61,4 @@
           appearance: none;
   margin: 0;
 }
+

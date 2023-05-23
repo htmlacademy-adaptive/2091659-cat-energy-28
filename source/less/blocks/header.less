@@ -20,16 +20,30 @@
 
 .header__item {
 
+  &--trademark {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
 
   &--logo {
     align-self: center;
     padding-top: 4px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
-
-  &:--navigation {
-    flex-grow: 1;
-  }
 
   @media (min-width: @width-tablet) {
     &:--navigation {

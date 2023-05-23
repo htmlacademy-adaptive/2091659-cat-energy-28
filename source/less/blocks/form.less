@@ -45,11 +45,13 @@
     @media (min-width: @width-tablet) {
       padding-left: 39px;
       padding-top: 24px;
+      padding-right: 36px;
     }
 
     @media (min-width: @width-desktop) {
       grid-area: 2 / 1 / 3 / 2 ;
       padding-left: 0;
+      padding-right: 0;
     }
   }
 
@@ -88,6 +90,10 @@
       top: -46px;
       margin-right: calc((320px - 100vw)/2);
       margin-left: calc((320px - 100vw)/2);
+
+      @media (min-width: @width-tablet) {
+        top: -68px;
+      }
 
       @media (min-width: @width-desktop) {
         top: -67px;
