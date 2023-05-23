@@ -135,3 +135,24 @@
 
 }
 
+.slider__bar&:hover > .slider__button,
+.slider__bar&:focus > .slider__button {
+  background-color: @basic-white;
+  border-color: @basic-green;
+
+  &::after,
+  &::before {
+    background-color: @basic-green;
+  }
+}
+
+.slider__bar&:active > .slider__button {
+  background-color: @basic-white;
+  border-color: @basic-green-action;
+
+  &::after,
+  &::before {
+    background-color: @basic-green-action;
+  }
+}
+
