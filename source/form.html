@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Подбор программы</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="/fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
@@ -62,21 +65,21 @@
         <ul class="form__list form__list--program-options program-options">
           <li class="program-options__item">
             <label class="program-options__control title title--program-options">
-              <input class="program-options__control-input visually-hidden" type="radio" name="program-selection" checked>
+              <input class="program-options__control-input visually-hidden" type="radio" name="program-selection" value="Weight loss" checked>
               <span class="program-options__control-mark-radio"></span>
               <span class="program-options__control-label title title--control-label">Похудение</span>
             </label>
           </li>
           <li class="program-options__item">
             <label class="program-options__control title title--program-options">
-              <input class="program-options__control-input visually-hidden" type="radio" name="program-selection">
+              <input class="program-options__control-input visually-hidden" type="radio" name="program-selection" value="Weight gain">
               <span class="program-options__control-mark-radio"></span>
               <span class="program-options__control-label title title--control-label">Набор массы</span>
             </label>
           </li>
           <li class="program-options__item">
             <label class="program-options__control title title--program-options">
-              <input class="program-options__control-input visually-hidden" type="radio" name="program-selection">
+              <input class="program-options__control-input visually-hidden" type="radio" name="program-selection" value="Need advice">
               <span class="program-options__control-mark-radio"></span>
               <span class="program-options__control-label title title--control-label">Не знаю (Нужен ваш совет)</span>
             </label>
@@ -146,12 +149,12 @@
       <h2 class="visually-hidden">Наш адрес.</h2>
       <div class="contacts__wrapper">
         <p class="contacts__title title title--contacts">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-        <address class="contacts__address description description--address"><span class="contacts__address--street">ул. Большая Конюшенная, д. 19/8</span><span class="contacts__address--town">Санкт-Петербург</span></address>
+        <address class="contacts__address description description--address"><span class="contacts__address-street">ул. Большая Конюшенная, д. 19/8</span><span class="contacts__address-town">Санкт-Петербург</span></address>
       </div>
       <div class="contacts__wrapper-map">
-        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6722.511226788325!2d30.31935606713698!3d59.93853592395248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682414857742!5m2!1sru!2sru"
+        <iframe class="contacts__map contacts__map--no-js" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6722.511226788325!2d30.31935606713698!3d59.93853592395248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682414857742!5m2!1sru!2sru"
         width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Расположение офиса компании на карте в Санкт-Петербурге."></iframe>
-        <figure class="contacts__figure with-js--hidden">
+        <figure class="contacts__figure contacts__figure--no-js">
           <picture>
             <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">

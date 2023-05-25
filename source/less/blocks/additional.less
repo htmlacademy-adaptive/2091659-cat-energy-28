@@ -91,10 +91,15 @@
   border: 1px solid @input-hover;
 }
 
-.additional__control:focus .additional__mark {
+.additional__control:focus-within .additional__mark {
   border: 1px solid @input-hover;
+  outline: 1px solid @basic-grey-description;
+}
+
+.additional__control:focus-within .additional__label {
+  outline: 1px solid @basic-grey-description;
 }
 
 .additional__control:disabled {
-  opacity: 30%;
+  opacity: 0.3;
 }
