@@ -62,11 +62,6 @@
     margin-top: 0;
     position: relative;
 
-    &--description {
-      position: relative;
-      z-index: 2;
-    }
-
     &::after {
       position: absolute;
       counter-increment: section;
@@ -96,13 +91,11 @@
 
     @media (min-width: @width-tablet) {
       background-size: 80px 80px;
-      grid-area: 1 / 1 / 2 / 2;
       background-position: 0px 17px;
       width: 230px;
     }
 
     @media (min-width: @width-desktop) {
-      grid-area: 1 / 1 / 2 / 2;
       width: 226px;
     }
   }
@@ -115,13 +108,11 @@
 
     @media (min-width: @width-tablet) {
       background-size: 80px 80px;
-      grid-area: 1 / 2 / 2 / 3;
       background-position: 0px 17px;
       width: 245px;
     }
 
     @media (min-width: @width-desktop) {
-      grid-area: 1 / 2 / 2 / 3;
       width: 248px;
     }
   }
@@ -133,13 +124,11 @@
 
     @media (min-width: @width-tablet) {
       background-size: 80px 80px;
-      grid-area: 2 / 1 / 3 / 2;
       background-position: 0px 17px;
       width: 245px;
     }
 
     @media (min-width: @width-desktop) {
-      grid-area: 1 / 3 / 2 / 4;
       width: 248px;
     }
   }
@@ -151,14 +140,17 @@
 
     @media (min-width: @width-tablet) {
       background-size: 80px 80px;
-      grid-area: 2 / 2 / 3 / 3;
       background-position: 0px 17px;
       width: 250px;
     }
 
     @media (min-width: @width-desktop) {
-      grid-area: 1 / 4 / 2 / 5;
       width: 248px;
     }
+  }
+
+  .advantages__item-description {
+    position: relative;
+    z-index: 2;
   }
 }

@@ -77,11 +77,13 @@
   border: 1px solid @input-hover;
 }
 
-.program-options__control:focus .program-options__control-mark-radio {
+.program-options__control:focus-within .program-options__control-mark-radio,
+.program-options__control:focus-within .program-options__control-label {
   border: 1px solid @input-hover;
+  outline: 1px solid @basic-grey-description ;
 }
 
-.program-options__control:disabled {
-  opacity: 30%;
+.program-options__control-input[type="radio"]:disabled + program-options__control-mark-radio,
+.program-options__control-input[type="radio"]:disabled + program-options__control-label {
+  opacity: 0.3;
 }
-

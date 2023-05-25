@@ -84,17 +84,17 @@
     align-self: baseline;
     row-gap: 21px;
   }
+}
 
-  &--street {
-    @media (min-width: @width-tablet) {
-      line-height:16px;
-    }
+.contacts__address-street {
+  @media (min-width: @width-tablet) {
+    line-height:16px;
   }
+}
 
-  &--town {
-    @media (min-width: @width-tablet) {
-      align-self: flex-end;
-    }
+.contacts__address-town {
+  @media (min-width: @width-tablet) {
+    align-self: flex-end;
   }
 }
 
@@ -104,6 +104,14 @@
   @media (min-width: @width-tablet) {
     width: 100%;
     height: auto;
+  }
+
+  &--no-js {
+    display: block;
+  }
+
+  &--with-js {
+    display: none;
   }
 }
 
@@ -119,5 +127,13 @@
 
   @media (min-width: @width-tablet) {
     height: 400px;
+  }
+
+  &--no-js {
+    display: none;
+  }
+
+  &--with-js {
+    display: block;
   }
 }
