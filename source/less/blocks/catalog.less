@@ -18,7 +18,8 @@
   @media (min-width: @width-tablet) {
     .centering-wrapper(@width-tablet);
     grid-template-columns: 1fr 1fr;
-    gap: 58px;
+    column-gap: 58px;
+    row-gap: 52px;
     padding-bottom: 43px;
   }
 
@@ -49,15 +50,18 @@
     content: "";
     position: absolute;
     height: 2px;
-    left: 0;
-    right: -5px;
+    right: -22px;
     background-color: #68B738;
     top: 42px;
     margin-right: calc((320px - 100vw)/2);
     margin-left: calc((320px - 100vw)/2);
+    width: 100vw;
 
     @media (min-width: @width-tablet) {
-      top:46px;
+      top:53px;
+      width: initial;
+      left: 0;
+
     }
 
     @media (min-width: @width-desktop) {

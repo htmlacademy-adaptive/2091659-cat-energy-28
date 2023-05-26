@@ -85,15 +85,17 @@
       content: "";
       position: absolute;
       height: 2px;
-      left: 0;
-      right: -20px;
+      right: -22px;
       background-color: #68b738;
       top: -46px;
       margin-right: calc((320px - 100vw)/2);
       margin-left: calc((320px - 100vw)/2);
+      width: 100vw;
 
       @media (min-width: @width-tablet) {
         top: -68px;
+        width: initial;
+        left: 0;
       }
 
       @media (min-width: @width-desktop) {
@@ -125,15 +127,17 @@
       content: "";
       position: absolute;
       height: 2px;
-      left: 0;
-      right: -20px;
+      right: -22px;
       background-color: #68b738;
       top: -10px;
       margin-right: calc((320px - 100vw)/2);
       margin-left: calc((320px - 100vw)/2);
+      width: 100vw;
 
       @media (min-width: @width-tablet) {
         top: -14px;
+        width: initial;
+        left: 0;
       }
     }
   }
@@ -155,12 +159,17 @@
       content: "";
       position: absolute;
       height: 2px;
-      left: 0;
-      right: -20px;
+      right: -22px;
       background-color: #68b738;
       top: -33px;
       margin-right: calc((320px - 100vw)/2);
       margin-left: calc((320px - 100vw)/2);
+      width: 100vw;
+
+      @media (min-width: @width-tablet) {
+        width: initial;
+        left: 0;
+      }
     }
   }
 }
@@ -185,6 +194,8 @@
     background-color: @basic-white;
     width: 197px;
     position: inherit;
+    padding-left: 20px;
+    margin-left: -20px;
 
     @media (min-width: @width-tablet) {
       width: 553px;
@@ -206,6 +217,8 @@
     position: relative;
     padding-bottom: 22px;
     width: 160px;
+    padding-left: 20px;
+    margin-left: -20px;
 
     @media (min-width: @width-tablet) {
       width: 245px;
@@ -224,6 +237,8 @@
     background-color: @basic-white;
     width: 139px;
     position: inherit;
+    padding-left: 20px;
+    margin-left: -20px;
 
     @media (min-width: @width-tablet) {
       padding-left: 39px;

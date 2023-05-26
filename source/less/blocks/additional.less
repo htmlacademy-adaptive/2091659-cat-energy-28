@@ -15,42 +15,15 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 90px;
   }
-
-}
-
-.additional__control {
-  padding-left: 46px;
-  position: relative;
-  display: flex;
-
-  @media (min-width: @width-tablet) {
-    padding-left: 55px;
-  }
-}
-
-.additional__mark {
-  position: absolute;
-  content: "";
-  width: 28px;
-  height: 28px;
-  border: 1px solid @basic-grey-border;
-  top: -8px;
-  left: 0;
-
-  @media (min-width: @width-tablet) {
-    width: 38px;
-    height: 38px;
-    top: -5px;
-    left: -5px;
-  }
 }
 
 .additional__item {
   padding-top: 6px;
   padding-bottom: 6px;
+  padding-left: 46px;
 
   @media (min-width: @width-tablet) {
-    padding-left: 44px;
+    padding-left: 83px;
   }
 
   @media (min-width: @width-desktop) {
@@ -58,15 +31,37 @@
   }
 }
 
-.additional__input[type="checkbox"]:checked + .additional__mark {
+.additional__control {
+  position: relative;
+  display: flex;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    border: 1px solid @basic-grey-border;
+    top: -8px;
+    left: 0;
+
+    @media (min-width: @width-tablet) {
+      width: 38px;
+      height: 38px;
+      top: -5px;
+      left: -58px;
+    }
+  }
+}
+
+.additional__input[type="checkbox"]:checked + .additional__control {
   &::before {
     position: absolute;
     content: "";
     width: 30px;
     height: 30px;
     background-color: @basic-green;
-    top:50%;
-    left: 50%;
+    top: 50%;
+    left: -37px;
     transform: translateX(-28%) translateY(-19%);
     mask: url(../img/icons/stek.svg#icon-form-jackdaw);
     mask-repeat: no-repeat;
@@ -87,19 +82,27 @@
   }
 }
 
-.additional__control:hover .additional__mark {
-  border: 1px solid @input-hover;
+.additional__input:hover ~ .additional__control {
+  cursor: pointer;
+
+  &::after {
+    border: 1px solid @input-hover;
+  }
 }
 
-.additional__control:focus-within .additional__mark {
-  border: 1px solid @input-hover;
-  outline: 1px solid @basic-grey-description;
+.additional__input:focus ~ .additional__control {
+  outline: 1px solid @input-hover;
+
+  &::after {
+    outline: 1px solid @input-hover;
+  }
 }
 
-.additional__control:focus-within .additional__label {
-  outline: 1px solid @basic-grey-description;
+.additional__input:active ~ .additional__control {
+  opacity: 0.6;
 }
 
-.additional__control:disabled {
+.additional__input:disabled ~ .additional__control {
   opacity: 0.3;
+  cursor: default;
 }

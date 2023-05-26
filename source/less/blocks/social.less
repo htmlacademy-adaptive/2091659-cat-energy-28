@@ -67,69 +67,151 @@
   align-self: center;
 
   &--vkontakte {
-    mask: url(../img/icons/stek.svg#vkontakte);
-    background-color: @slider-color;
+    position: relative;
     width: 28px;
     height: 22px;
 
-    &:hover,
+    &::before {
+      position: absolute;
+      content: "";
+      mask: url(../img/icons/stek.svg#vkontakte);
+      background-color: @slider-color;
+      width: 28px;
+      height: 22px;
+      top:0;
+      left: 0;
+    }
+
+    &:hover {
+      &::before {
+        background-color: @basic-green;
+      }
+    }
+
     &:focus {
-      background-color: @basic-green;
+      &::before {
+        background-color: @basic-green;
+      }
     }
 
     &:active {
-      background-color: @basic-green;
-      opacity: 0.3;
+      &::before {
+        background-color: @basic-green;
+        opacity: 0.3;
+      }
     }
   }
 
   &--youtube {
-    mask: url(../img/icons/stek.svg#youtube);
-    background-color: @slider-color;
     width: 28px;
     height: 22px;
+    position: relative;
 
-    &:hover,
+    &::before {
+      position: absolute;
+      content: "";
+      mask: url(../img/icons/stek.svg#youtube);
+      background-color: @slider-color;
+      width: 28px;
+      height: 22px;
+      top:0;
+      left: 0;
+    }
+
+    &:hover {
+      &::before {
+        background-color: @basic-green;
+      }
+    }
+
     &:focus {
-      background-color: @basic-green;
+      &::before {
+        background-color: @basic-green;
+      }
     }
 
     &:active {
-      background-color: @basic-green;
-      opacity: 0.3;
+      &::before {
+        background-color: @basic-green;
+        opacity: 0.3;
+      }
     }
   }
 
   &--telegram {
-    mask: url(../img/icons/stek.svg#telegram);
-    background-color: @slider-color;
     width: 28px;
     height: 22px;
+    position: relative;
 
-    &:hover,
+    &::before {
+      position: absolute;
+      content: "";
+      mask: url(../img/icons/stek.svg#telegram);
+      background-color: @slider-color;
+      width: 28px;
+      height: 22px;
+      top:0;
+      left: 0;
+    }
+
+    &:hover {
+      &::before {
+        background-color: @basic-green;
+      }
+    }
+
     &:focus {
-      background-color: @basic-green;
+      &::before {
+        background-color: @basic-green;
+      }
     }
 
     &:active {
-      background-color: @basic-green;
-      opacity: 0.3;
+      &::before {
+        background-color: @basic-green;
+        opacity: 0.3;
+      }
     }
   }
 
   &--logo {
-    mask: url(../img/icons/stek.svg#cat-logo);
+    position: relative;
     width: 128px;
     height: 24px;
-    background-color: @secondary-black-contacts;
 
-    &:hover,
+    &::before {
+      position: absolute;
+      content: "";
+      mask: url(../img/icons/stek.svg#cat-logo);
+      background-color: @secondary-black-contacts;
+      width: 128px;
+      height: 24px;
+      top:0;
+      left: 0;
+
+      @media (min-width: @width-tablet) {
+        width: 143px;
+        height: 27px;
+      }
+    }
+
+    &:hover {
+      &::before {
+        background-color: @cat-logo-colore;
+      }
+    }
+
     &:focus {
-      background-color: @cat-logo-colore;
+      &::before {
+        background-color: @cat-logo-colore;
+      }
     }
 
     &:active {
-      background-color: @cat-logo-colore-active;
+      &::before {
+        background-color: @cat-logo-colore-active;
+      }
+
     }
 
     @media (min-width: @width-tablet) {
@@ -139,30 +221,62 @@
   }
 
   &--academy {
-    mask: url(../img/icons/stek.svg#logo-html-academy);
+    position: relative;
     width: 113px;
     height: 19px;
-    background-color: @basic-grey-description;
+
+    &::before {
+      position: absolute;
+      content: "";
+      mask: url(../img/icons/stek.svg#logo-html-academy);
+      background-color: @slider-color;
+      width: 113px;
+      height: 19px;
+      top:0;
+      left: 0;
+    }
 
     &:active {
-      opacity: 0.3;
+      &::before {
+        opacity: 0.3;
+      }
+
     }
   }
 
   &--trademark-html-academy {
-    mask: url(../img/icons/stek.svg#trademark-html-academy);
+    position: relative;
     width: 27px;
     height: 34px;
-    background-color: @slider-color;
 
-    &:hover,
+    &::before {
+      position: absolute;
+      content: "";
+      mask: url(../img/icons/stek.svg#trademark-html-academy);
+      background-color: @slider-color;
+      width: 27px;
+      height: 34px;
+      top:0;
+      left: 0;
+    }
+
+    &:hover {
+      &::before {
+        background-color: @basic-green;
+      }
+    }
+
     &:focus {
-      background-color: @basic-green;
+      &::before {
+        background-color: @basic-green;
+      }
     }
 
     &:active {
-      background-color: @basic-green;
-      opacity: 0.3;
+      &::before {
+        background-color: @basic-green;
+        opacity: 0.3;
+      }
     }
   }
 }
