@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  row-gap: 13px;
+  row-gap: 12px;
 
   @media (min-width: @width-tablet) {
     display: grid;
@@ -13,7 +13,7 @@
 
   @media (min-width: @width-desktop) {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 90px;
+    column-gap: 78px;
   }
 }
 
@@ -23,11 +23,11 @@
   padding-left: 46px;
 
   @media (min-width: @width-tablet) {
-    padding-left: 83px;
+    padding-left: 101px;
   }
 
   @media (min-width: @width-desktop) {
-    padding-left: 0;
+    padding-left: 60px;
   }
 }
 
@@ -42,7 +42,7 @@
     height: 28px;
     border: 1px solid @basic-grey-border;
     top: -8px;
-    left: 0;
+    left: -46px;
 
     @media (min-width: @width-tablet) {
       width: 38px;
@@ -60,18 +60,20 @@
     width: 30px;
     height: 30px;
     background-color: @basic-green;
-    top: 50%;
-    left: -37px;
+    top: 40%;
+    left: -31px;
     transform: translateX(-28%) translateY(-19%);
     mask: url(../img/icons/stek.svg#icon-form-jackdaw);
     mask-repeat: no-repeat;
-    mask-size: 18px 14px;
+    mask-size: 18px 16px;
 
     @media (min-width: @width-tablet) {
       width: 36px;
       height: 30px;
       mask-size: 29px 26px;
       transform: translateX(-37%) translateY(-43%);
+      top: 53%;
+      left: -41px;
     }
 
     @media (min-width: @width-desktop) {

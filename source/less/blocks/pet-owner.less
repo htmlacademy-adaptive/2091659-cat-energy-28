@@ -1,7 +1,7 @@
 .pet-owner {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 16px;
+  row-gap: 18px;
   column-gap: 10px;
 
   @media (min-width: @width-tablet) {
@@ -12,8 +12,9 @@
   }
 
   @media (min-width: @width-desktop) {
-    column-gap: 78px;
+    column-gap: 62px;
     padding-right: 0;
+    padding-bottom: 57px;
   }
 }
 
@@ -112,13 +113,21 @@
 
 .pet-owner__span {
   align-self: center;
+
+  &--tel {
+    @media (min-width: @width-desktop) {
+    padding-left: 8px;
+  }
+  }
+
+
 }
 
 .pet-owner__input {
-  padding-top: 11px;
+  padding-top: 12px;
   padding-right: 24px;
   padding-bottom: 10px;
-  padding-left: 13px;
+  padding-left: 15px;
   border: 1px solid @form-border;
   flex-grow: 1;
   cursor: pointer;
@@ -132,18 +141,20 @@
   @media (min-width: @width-desktop) {
     min-width:auto;
     flex-grow: 1;
-    padding-left: 31px;
+    padding-left: 20px;
   }
 
   &--email {
     @media (min-width: @width-desktop) {
-      width: 237px;
+      width: 241px;
+      padding-right: 35px;
     }
   }
 
   &--tel {
     @media (min-width: @width-desktop) {
       width: 237px;
+      padding-left: 18px;
     }
 
   }
