@@ -83,6 +83,9 @@
 
   &--pro {
     padding-top: 4px;
+    @media (min-width: @width-desktop) {
+      padding-top: 3px;
+    }
   }
 
   @media (min-width: @width-tablet) {
@@ -108,8 +111,16 @@
   }
 
   @media (min-width: @width-desktop) {
-    padding-top: 73px;  }
+    padding-top: 73px;
+  }
+
+  &--pro {
+    @media (min-width: @width-desktop) {
+      padding-top: 71px;
+    }
+  }
 }
+
 
 .program__button {
   display: block;
@@ -124,7 +135,7 @@
   }
 
   @media (min-width: @width-desktop) {
-    padding-top: 25px;
+    padding-top: 27px;
   }
 
   &::before {

@@ -23,20 +23,24 @@
   z-index: 1;
   width: 226px;
   padding-right: 19px;
+  padding-left: 20px;
+  margin-left: -20px;
 
   @media (min-width: @width-tablet) {
     width: 352px;
     padding-left: 37px;
     padding-bottom: 82px;
     padding-top: 30px;
+    margin-left: 0;
   }
 
   @media (min-width: @width-desktop) {
     width: 372px;
     grid-area: 1 / 1 / 2 / 3;
-    padding-left: 0;
     padding-right: 0;
     padding-bottom: 79px;
+    margin-left: -36px;
+    padding-left: 36px;
   }
 }
 
@@ -44,8 +48,8 @@
   display: grid;
   grid-template-columns: 1fr;
   width: 280px;
-  padding-top: 13px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 19px;
   border-top: 1px solid @basic-grey-border;
   row-gap: 15px;
 
@@ -123,7 +127,7 @@
 }
 
 .additional-catalog__gift {
-  margin-top: 39px;
+  margin-top: 32px;
   margin-bottom: 35px;
 
   @media (min-width: @width-tablet) {

@@ -64,25 +64,16 @@
         <legend class="visually-hidden">Выберите программу для кота.</legend>
         <ul class="form__list form__list--program-options program-options">
           <li class="program-options__item">
-            <label class="program-options__control title title--program-options">
-              <input class="program-options__control-input visually-hidden" type="radio" name="program-selection" value="Weight loss" checked>
-              <span class="program-options__control-mark-radio"></span>
-              <span class="program-options__control-label title title--control-label">Похудение</span>
-            </label>
+            <input class="program-options__control-input visually-hidden" id="weight-loss" type="radio" name="program-selection" value="weight-loss" checked>
+            <label class="program-options__control title title--program-options" for="weight-loss"><span class="program-options__control-label title title--control-label">Похудение</span></label>
           </li>
           <li class="program-options__item">
-            <label class="program-options__control title title--program-options">
-              <input class="program-options__control-input visually-hidden" type="radio" name="program-selection" value="Weight gain">
-              <span class="program-options__control-mark-radio"></span>
-              <span class="program-options__control-label title title--control-label">Набор массы</span>
-            </label>
+            <input class="program-options__control-input visually-hidden" id="weight-gain" type="radio" name="program-selection" value="weight-gain">
+            <label class="program-options__control title title--program-options" for="weight-gain"><span class="program-options__control-label title title--control-label">Набор массы</span></label>
           </li>
           <li class="program-options__item">
-            <label class="program-options__control title title--program-options">
-              <input class="program-options__control-input visually-hidden" type="radio" name="program-selection" value="Need advice">
-              <span class="program-options__control-mark-radio"></span>
-              <span class="program-options__control-label title title--control-label">Не знаю (Нужен ваш совет)</span>
-            </label>
+            <input class="program-options__control-input visually-hidden" id="need-advice" type="radio" name="program-selection" value="need-advice">
+            <label class="program-options__control title title--program-options" for="need-advice"><span class="program-options__control-label title title--control-label">Не знаю (Нужен ваш совет)</span></label>
           </li>
         </ul>
       </fieldset>
@@ -93,7 +84,7 @@
           <input class="pet-owner__input pet-owner__input--email title title--owner-contacts" type="email" name="email-pet-owner" id="email-pet-owner" placeholder="E-mail" value="kuklachev@gmail.com" required>
         </label>
         <label class="pet-owner__label pet-owner__label--tel title title--owner-contacts" for="tel-pet-owner">
-          <span class="pet-owner__span">Телефон:*</span>
+          <span class="pet-owner__span pet-owner__span--tel">Телефон:*</span>
           <input class="pet-owner__input pet-owner__input--tel title title--owner-contacts" type="tel"  name="tel-pet-owner" id="tel-pet-owner" pattern="8\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (111) 222-33-44" value="8 (960) 900-60-90" required>
         </label>
       </fieldset>
@@ -107,32 +98,20 @@
         <legend class="form__fieldset-title form__fieldset-title--checkbox title title--legend-checkbox">Дополнительно</legend>
         <ul class="form__list form__list--additional additional">
           <li class="additional__item">
-            <label class="additional__control">
-              <input class="additional__input visually-hidden" type="checkbox" name="sweetener" checked>
-              <span class="additional__mark"></span>
-              <span class="additional__label title title--checkbox">Сахарозаменитель</span>
-            </label>
+            <input class="additional__input visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
+            <label class="additional__control" for="sweetener"><span class="additional__label title title--checkbox">Сахарозаменитель</span></label>
           </li>
           <li class="additional__item">
-            <label class="additional__control">
-              <input class="additional__input visually-hidden" type="checkbox" name="water">
-              <span class="additional__mark"></span>
-              <span class="additional__label title title--checkbox">Питьевая вода</span>
-            </label>
+            <input class="additional__input visually-hidden" type="checkbox" name="water" id="water">
+            <label class="additional__control" for="water"><span class="additional__label title title--checkbox">Питьевая вода</span></label>
           </li>
           <li class="additional__item">
-            <label class="additional__control">
-              <input class="additional__input visually-hidden" type="checkbox" name="milk">
-              <span class="additional__mark"></span>
-              <span class="additional__label title title--checkbox">Молоко</span>
-            </label>
+            <input class="additional__input visually-hidden" type="checkbox" name="milk" id="milk">
+            <label class="additional__control" for="milk"><span class="additional__label title title--checkbox">Молоко</span></label>
           </li>
           <li class="additional__item">
-            <label class="additional__control">
-              <input class="additional__input visually-hidden" type="checkbox" name="vitamins">
-              <span class="additional__mark"></span>
-              <span class="additional__label title title--checkbox">Витамины</span>
-            </label>
+            <input class="additional__input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
+            <label class="additional__control" for="vitamins"><span class="additional__label title title--checkbox">Витамины</span></label>
           </li>
         </ul>
       </fieldset>
